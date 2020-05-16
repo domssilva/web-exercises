@@ -19,7 +19,7 @@ function spinalCase(str) {
   }
 
   strResult = strResult.replace(/\s\s|\s/gi, '-');
-  console.log(strResult);
+  return strResult;
 }
 
 spinalCase("This Is Spinal Tap");
