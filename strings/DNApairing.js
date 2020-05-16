@@ -12,19 +12,16 @@ You will get a DNA strand sequence and you need to get the pair and return it as
 function pairElement(str) {
   let res = [];
   let dnaPairs = {
-    "A": "AT", 
-    "T": "TA", 
-    "G": "GC", 
-    "C": "CG",
+    "A": ["A", "T"], 
+    "T": ["T", "A"], 
+    "G": ["G", "C"], 
+    "C": ["C", "G"],
   };
   
   str = str.split('');
-  
-  str.forEach(dnaStrand => {
-    res.push(dnaPairs[dnaStrand].split(''));
-  })
+  res = str.map(strand => dnaPairs[strand]);
 
-  return res;
+  return res; 
 }
 
 pairElement("ATCGA");
