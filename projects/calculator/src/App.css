@@ -4,7 +4,7 @@
 }
 
 body {
-  background: black;
+  background: rgb(192, 192, 192);
   overflow-x: hidden;
 }
 
@@ -22,12 +22,12 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-#display {
+.display-container {
   width: 100%;
-  background: rgb(15, 15, 15);
+  background: rgb(27, 27, 27);
   color: white;
   margin: 0;
-  height: 60px;
+  min-height: 60px;
 }
 
 #display p {

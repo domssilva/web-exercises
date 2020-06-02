@@ -3,8 +3,9 @@ import React from 'react';
 const Display = props => {
 
   return(
-    <div id="display">
-      <p>{props.show}</p>
+    <div className="display-container">
+      <p id="display">{props.expression}</p>
+      <p>{props.clicked}</p>
     </div>
   );
 }

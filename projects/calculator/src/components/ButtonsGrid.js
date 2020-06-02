@@ -7,7 +7,7 @@ const ButtonsGrid = props => {
     4: "four",5: "five",6: "six",7: "seven",
     8: "eight", 9: "nine", "-": "subtract",
     "+": "add", "*": "multiply", "/": "divide",
-    ".": "decimal", 'c': "clear"
+    ".": "decimal", 'c': "clear", '=': 'equals',
   };
 
   const buttons = [
