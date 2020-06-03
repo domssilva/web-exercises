@@ -1,3 +1,7 @@
+/*
+  Formula logic being applied with infix to postfix
+  transformation, using stacks.
+*/
 
 function operation(operator, op1, op2) {
   const operators = /[*/+-]/gi;

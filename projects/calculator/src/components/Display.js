@@ -4,7 +4,7 @@ const Display = props => {
 
   return(
     <div className="display-container">
-      <p id="display">{props.expression}</p>
+      <p id="display">{props.display}</p>
       <p>{props.clicked}</p>
     </div>
   );

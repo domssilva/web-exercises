@@ -5,47 +5,55 @@ import './App.css';
 
 import Display from './components/Display.js';
 import ButtonsGrid from './components/ButtonsGrid.js';
-import calculate from './tasks/calculate.js';
 
 function App() {
 
   const [clicked, setClicked] = useState('');
-  const [expression, setExpression] = useState('');
+  const [display, setDisplay] = useState('0');
+
+  const operators = /[=*/+-]/;
 
   const handleClick = value => {
-    if (value !== '=' && value !== 'c') {
-      setExpression(expression + value.toString());
-    } 
-    if (expression == '0') {
-      
+    // verify last display item.
+    const lastDisplayElementIdx = Number(display.length - 1);
+    const lastDisplayElement = display[lastDisplayElementIdx];
+    
+    switch(value) {
+      case '<':
+        if (display.length === 1) {
+          setDisplay(0);
+          setClicked('');
+        } else if (display.length > 1) {
+          setDisplay(display.slice(0, lastDisplayElementIdx));
+        }
+        break;
+      case '=':
+        setDisplay(eval(display));
+        break;
+      case 'c':
+        setDisplay(0);
+        setClicked('');
+        break;
+      default:
+        
+        // If its a zero -> dont allow more zeros
+        if (value === 0 && lastDisplayElement === 0) {
+          break;
+        } else if (value === '.' && lastDisplayElement === '.') {
+          // If its a . -> dont allow more dots
+          break;
+        }
+        setClicked(value);
+        setDisplay(exp => {return exp + value});
     }
-    setClicked(value);
-  }
 
-  useEffect(() => {
-      if (clicked === 'c') {
-        setClicked(0);
-        setExpression('');
-      } else if (clicked === '=') {
-        /*
-        0: ƒ evaluatePostfix(exp)
-        1: ƒ hasHigherPrecedence(op1, op2)
-        2: ƒ infixToPostfix(exp)
-        3: ƒ operation(operator, op1, op2)
-        4: ƒ splitExpression(exp)
-        */
-       let splitted = calculate[4](expression);
-       let infix = calculate[2](splitted);
-       let result = calculate[0](infix); 
-       setExpression(result);
-      } 
-  }, [clicked]);
+  }
 
   return (
     <div className="App">
 
       <section className="calculator">
-        <Display clicked={clicked} expression={expression}/>
+        <Display clicked={clicked} display={display}/>
         <ButtonsGrid update={handleClick}/>
       </section>
 
