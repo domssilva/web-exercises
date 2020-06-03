@@ -2,25 +2,10 @@
 
 const operators = /[*/+-]/gi;
 
-function evaluatePostfix(exp) {
-  let res;
-  let stack = [];
-  // 1. scan expression from left to right
-  for (let i = 0; i < exp.length; i++) {
-    res = 0;
-    let char = exp[i];
-
-    if (char.match(operators)) {
-      // char is an operator -> pop 2 elements from stack
-      // op1 = stack.pop() op2 = stack.pop()
-      // res = perform(exp[i], op1, op2)
-      // push result to stack
-      let op1, op2;
-      op2 = Number(stack.pop());
-      op1 = Number(stack.pop());
-
-      // now apply operation (stored in char)
-      switch(char) {
+function operation(operator, op1, op2) {
+      let res = 0;
+      
+      switch(operator) {
         case '*':
           res = op1 * op2;
           break;
@@ -33,8 +18,26 @@ function evaluatePostfix(exp) {
         case '-':
           res = op1 - op2;
           break;
-        
       }
+
+      return res;
+}
+
+function evaluatePostfix(exp) {
+  let res, char,
+      op1, op2;
+  let stack = [];
+  // 1. scan expression from left to right
+  for (let i = 0; i < exp.length; i++) {
+    res = 0;
+    char = exp[i];
+
+    if (char.match(operators)) {
+      // char is an operator -> pop 2 elements from stack
+      op2 = Number(stack.pop());
+      op1 = Number(stack.pop());
+      res = operation(char, op1, op2);
+
       // push result to stack
       stack.push(res);
     } else {
