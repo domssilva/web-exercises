@@ -8,10 +8,11 @@ import ButtonsGrid from './components/ButtonsGrid.js';
 
 function App() {
 
+  const [isDecimal, setIsDecimal] = useState(false);
   const [clicked, setClicked] = useState('');
   const [display, setDisplay] = useState('0');
 
-  const operators = /[=*/+-]/;
+  const operators = new RegExp(/[=*/+-]/);
 
   const handleClick = value => {
     // verify last display item.
@@ -19,6 +20,22 @@ function App() {
     const lastDisplayElement = display[lastDisplayElementIdx];
     
     switch(value) {
+      case '.':
+
+        if (isDecimal) {
+          break;
+        } else {
+          setIsDecimal(true);
+        }
+
+        if (lastDisplayElement === '.') {
+          break;
+        } else {
+          setDisplay(exp => {return exp + value});
+        }
+
+        break;
+
       case '<':
         if (display.length === 1) {
           setDisplay(0);
@@ -28,7 +45,7 @@ function App() {
         }
         break;
       case '=':
-        setDisplay(eval(display));
+        setDisplay(parseFloat(eval(display)));
         break;
       case 'c':
         setDisplay(0);
@@ -36,17 +53,31 @@ function App() {
         break;
       default:
         
-        // If its a zero -> dont allow more zeros
-        if (value === 0 && lastDisplayElement === 0) {
-          break;
-        } else if (value === '.' && lastDisplayElement === '.') {
-          // If its a . -> dont allow more dots
+        // if its an operator, set isDecimal to false
+        if (String(value).match(operators)) {
+          setIsDecimal(false);
+          setClicked(value);
+          setDisplay(prev => {return prev + value});
           break;
         }
-        setClicked(value);
-        setDisplay(exp => {return exp + value});
-    }
 
+        // If its a zero -> dont allow more zeros
+        if (value == 0 && lastDisplayElement == 0) {
+          break;
+        }
+
+        if (String(lastDisplayElement).match(operators)) {
+          setClicked(value);  
+        } else {
+          setClicked(val => {return String(val) + String(value)});
+        }
+
+        if (display == 0) {
+          setDisplay(String(value));
+        } else {
+          setDisplay(previous => {return String(previous) + String(value)});
+        }
+    }
   }
 
   return (
