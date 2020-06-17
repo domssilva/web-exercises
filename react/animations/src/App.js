@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Post from './components/post';
+import Post from './components/Post';
+import Slide from './components/Slide';
 import './App.css';
 
 function App() {
@@ -10,8 +11,7 @@ function App() {
         <a href="https://www.react-spring.io/docs/hooks/api" target="_blank">react-spring docs</a>
       </nav>
       <main>
-        <Post title='post 1'/>
-        <Post title='post 2'/>
+        <Slide/>
       </main>
     </div>
   );
