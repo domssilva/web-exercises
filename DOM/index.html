@@ -4,13 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOM</title>
-  <style>
-    #test {
-      height: 150px;
-      width: 150px;
-      background-color: green;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -50,36 +44,27 @@
     <div id="test"></div>
   </section> 
 
+  <header id="header">
+    <h1>hello world</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <ul>
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+    </ul>
+  </header>
+
+  <script src="script.js"></script>
   <script>
-    // console.dir(document.getElementById('main').children);
-  
-    let div = document.getElementById('test');
-    
-    let p = document.createElement('p');
-    p.style.color = '#333';
-    p.style.padding = '20px';
-    p.style.textTransform = 'capitalize';
-  
-    // console.dir(p.style);
-    function addSquare() {
-      let square = document.createElement('div');
-  
-      square.style.height = '40px';
-      square.style.width = '40px';
-      square.style.position = 'relative';
-      square.style.backgroundColor = 'purple';
-  
-      div.append(square);
-  
-      if (div.children.length > 0) {
-        div.style.backgroundColor = 'green';
-      }
-    }
-  
-    function clearSquares() {
-      console.dir(div);
-      div.innerHTML = '';
-    }
+
+    let header = document.getElementById('header');
+    console.dir(header);
+
+    let innerUl = header.querySelector('ul');
+    let lis = innerUl.children;
+
+    console.log(lis)
 
   </script>
 </body>
