@@ -2,4 +2,7 @@ build/
 node_modules/
 todo.md
 test.js
-.env
+*.env
+advanced-css-course/
+*.mp4
+*.webm
