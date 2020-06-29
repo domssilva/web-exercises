@@ -4,12 +4,12 @@ body {
   font-weight: 400;
   line-height: 1.7;
   padding: 3rem;
-  color: $gray;
+  color: $color-grey-dark;
 }
 
 
 .heading-primary {
-  color: $white;
+  color: $color-white;
   text-transform: uppercase;
   
   &--main {
@@ -38,4 +38,40 @@ body {
     margin-bottom: 60px;
   }
 
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  letter-spacing: 2px;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  transition: all .2s;
+
+  &:hover {
+    transform: scale(1.02);
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .3);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }
