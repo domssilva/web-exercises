@@ -12,18 +12,25 @@
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
     <body>
+        <!-- 
+            BEM:
+            
+                header = block 
+                __ separates block and element
+                --modifier
+        -->
         <header class="header">
-            <div class="logo-box">
-                <img src="img/logo-white.png" alt="Logo" class="logo">
+            <div class="header__logo-box">
+                <img src="img/logo-white.png" alt="Logo" class="header__logo">
             </div>
 
-            <div class="text-box">
+            <div class="header__text-box">
                 <h1 class="heading-primary">
-                    <span class="heading-primary-main">Lorem</span>
-                    <span class="heading-primary-sub">ipsum dolor sit amet</span>
+                    <span class="heading-primary--main">Lorem</span>
+                    <span class="heading-primary--sub">ipsum dolor sit amet</span>
                 </h1>
 
-                <a href="#" class="btn btn-white">discover out tours</a>
+                <a href="#" class="btn btn--white btn--animated">discover out tours</a>
             </div>
         </header>        
     </body>
