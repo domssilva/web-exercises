@@ -1,0 +1,50 @@
+.composition {
+
+  // border: 1px solid black;
+  // height: 400px;
+  position: relative;
+
+  &:hover &__photo:not(:hover) {
+    /* SELECTOR INTERPRETATION:
+        when we hover the .composition, then SELECT
+        the .composition__photo which is not hovered
+    */
+    transform: scale(0.95);
+
+  }
+
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    border-radius: 2px;
+    z-index: 10;
+    transition: all .2s;
+    position: absolute;
+    outline-offset: 1rem;
+    
+    &--p1 {
+      left: 0;
+      top: 0;
+    }
+
+    &--p2 {
+      // display: none;
+      right: 0;
+      top: 3rem;
+    }
+
+    &--p3 {
+      // display: none;
+      top: 11rem;
+      left: 20%;
+    }
+
+    &:hover {
+      outline: 1rem solid $color-primary;
+      transform: scale(1.05) translateY(-.5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+      z-index: 20;
+    }
+  }
+
+}
