@@ -1,0 +1,67 @@
+body {
+    background: #dfdfdf;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: monospace;
+}
+
+
+canvas {
+    display: block;
+    margin : 0 auto;
+    background: rgb(129, 128, 128);
+}
+
+#btns {
+    position: relative;
+    width: 190px;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: block;
+    /*styling*/
+    border: none;
+    border-radius: 8px;
+    background: rgb(27, 27, 27);
+    color: lemonchiffon;
+    cursor: pointer;
+}
+
+#up {
+    margin: 0 auto;
+}
+
+#leftNright {
+    display: flex;
+    justify-content: space-between;
+}
+
+#left {
+    left: 10px;
+}
+
+#right {
+    right: 10px;
+}
+
+#down {
+    margin: 0 auto;
+}
+
+#restart {
+    width: auto;
+    margin: 0 auto;
+    display: none;
+}
