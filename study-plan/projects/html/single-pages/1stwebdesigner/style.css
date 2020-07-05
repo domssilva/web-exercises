@@ -1,0 +1,451 @@
+:root {
+  --pink: #ff8185;
+  --base-10: #111;
+  --base-20: #222;
+  --base-30: #333;
+  --base-40: #444;
+  --base-50: #555;
+  --base-60: #666;
+  --base-70: #777;
+  --base-80: #888;
+  --base-90: #999;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  color: #1b1f25;
+  overflow-x: hidden;
+  line-height: 1.75rem;
+  font-family: "Open Sans",sans-serif;
+}
+
+a {
+  color: var(--pink);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+  display: block;
+  filter: contrast(0.8);
+  transition: .3s linear;
+}
+
+img:hover {
+  cursor: pointer;
+  filter: contrast(0.8) brightness(1.1);
+  transform: scale(1.05);
+}
+
+.mobile {
+  display: inline-block;
+  visibility: visible;
+}
+
+.desktop {
+  display: none;
+  visibility: hidden;
+}
+
+.title:hover {
+  cursor: pointer;
+  color: var(--pink);
+}
+
+/* HEADER */
+header .top {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .top form {
+  width: 35%;
+}
+
+header .top form .icon-magnifier {
+  cursor: pointer;
+  font-weight: 700;
+  transition: .5s linear;
+  color: var(--base-90);
+}
+
+header .top form .icon-magnifier:hover {
+  color: var(--base-10);
+}
+
+header .top form input {
+  border: none;
+  height: 30px;
+  max-width: 80%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .top .logo {
+  width: 60px;
+}
+
+header .social-icons {
+  width: 22%;
+  display: flex;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--base-90);
+  justify-content: space-evenly;
+}
+
+header .social-icons i:hover {
+  color: var(--pink);
+}
+
+header hr {
+  border: 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+header .bottom {
+  padding-top: 20px;
+  text-align: center;
+}
+
+header .bottom .icon-menu {
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.7rem;
+  color: var(--pink);
+  display: inline-block;
+}
+
+/* MAIN ARTICLE */
+main {
+  padding: 0;
+  margin-top: 10px;
+}
+
+main .top {
+  padding: 0 20px;
+}
+
+main .top article section h1 {
+  font-size: 2rem;
+}
+
+main article .design {
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.rightside .post {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightside .post .right {
+  margin-left: 20px;
+}
+
+.rightside .post img {
+  width: 200px;
+}
+
+.post .left {
+  margin-bottom: 10px;
+}
+
+main .design span {
+  font-size: .8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main .design .ux {
+  color: rgb(238, 13, 182);
+}
+
+main .design .web {
+  color: brown;
+}
+
+/* collections */
+
+section.bottom section {
+  padding: 30px 16px;
+}
+
+section .bottom section h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+section.bottom section img {
+  width: 60%;
+}
+
+.collections {
+  background-color: #f0f0f0;
+}
+
+.collections img {
+  margin-top: 22px;
+}
+
+.popular {
+  background: #19b8c4;
+}
+
+/* footer */
+footer {
+  color: white;
+  padding: 50px 10px;
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer .logo {
+  width: 90px;
+  margin: 10px auto;
+  display: block;
+}
+
+footer div {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+footer div ul li:hover {
+  cursor: pointer;
+  color: var(--pink);
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer ul li {
+  list-style-type: none;
+}
+
+@media (min-width: 900px) {
+  .mobile {
+    display: none;
+    visibility: hidden;
+  }
+
+  .desktop {
+    visibility: visible;
+    display: inline-block;
+  }
+
+  header ul,
+  header .bottom {
+    margin: 0;
+    padding: 0;
+  }
+
+  header .desktop {
+    width: 100%;
+  }
+
+  header .desktop ul {
+    padding: 5px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-evenly;
+  }
+
+  header .desktop ul a {
+    text-decoration: none;
+    color: var(--base-20);
+  }
+
+  header .desktop ul a:hover {
+    color: var(--pink);
+  }
+
+  /* main */
+  main section.top {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main .rightside {
+    width: 40%;
+    min-width: 500px;
+  }
+
+  .rightside .post {
+    flex-direction: row;
+  }
+  
+  main article {
+    width: 50%;
+  }
+
+  main article img {
+    width: 100%;
+    margin: 0;
+  }
+  /* collections */
+  .collections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+      "title title title title"
+      "title title title title"
+      "one two three four";
+  }
+
+  .collections .intro {
+    grid-area: title;
+  }
+
+  .collections .one,
+  .collections .two,
+  .collections .three,
+  .collections .four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+  }
+
+  .collections .one img,
+  .collections .two img,
+  .collections .three img,
+  .collections .four img {
+    margin: 0;
+    width: 100%;
+  }
+
+  .collections .one {
+    grid-area: one;
+  }
+
+  .collections .two {
+    grid-area: two;
+  }
+
+  .collections .three {
+    grid-area: three;
+  }
+
+  .collections .four {
+    grid-area: four;
+  }
+
+  /* news */
+  .news {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+      "title title title title title"
+      "title title title title title"
+      "one two three four five";
+  }
+
+  .news .intro {
+    grid-area: title;
+  }
+
+  .news .one,
+  .news .two,
+  .news .three,
+  .news .four,
+  .news .five {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+  }
+
+  .news .one img,
+  .news .two img,
+  .news .three img,
+  .news .four img,
+  .news .five img {
+    margin: 0;
+    width: 100%;
+  }
+
+  .news .one {
+    grid-area: one;
+  }
+
+  .news .two {
+    grid-area: two;
+  }
+
+  .news .three {
+    grid-area: three;
+  }
+
+  .news .four {
+    grid-area: four;
+  }
+
+  .news .five {
+    grid-area: five;
+  }
+
+  .popular {
+    padding: 20px;
+    display: grid;
+    grid-template-areas: 
+      "intro right"
+      "intro right"
+      "bottom right"
+      "bottom right";
+  }
+
+  .popular .intro {
+    grid-area: intro;
+  }
+
+  .popular .bottom {
+    grid-area: bottom;
+  }
+
+  .popular .right {
+    grid-area: right;
+  }
+
+  .popular .right img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .popular .right .one,
+  .popular .right .two,
+  .popular .right .three {
+    display: flex;
+  }
+
+  .popular .right .text {
+    margin-left: 20px;
+  }
+
+  /* footer */
+  footer {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  footer div {
+    text-align: left;
+  }
+
+  footer .logo {
+    margin: 0;
+  }
+}

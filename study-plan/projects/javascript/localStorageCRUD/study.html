@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>local storage</title>
+</head>
+<body>
+  <main>
+    <h1>Web Storage API</h1>
+    <p>mechanism by which browsers can securely store key/value pairs</p>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API" target="_blank">MDN reference</a>
+    <br>
+    <a href="http://diveintohtml5.info/storage.html" target="_blank">diveintohtml5</a>
+    <br>
+    <a href="/index.html">index</a>
+
+    <ul>
+      <li>window.sessionStorage</li>
+      <li>window.localStorage</li>
+    </ul>
+
+    <p>localStorage only supports stirngs. Arrays must be converted to a string format; the best way to do this is to convert it into a JSON array.</p>
+  </main>
+
+  <div class="project">
+    <h2>add todo</h2>
+    <form action="">
+      <fieldset>
+        <input type="text" name="todo">
+        <input type="submit" value="add">
+      </fieldset>
+    </form>
+
+    <button id="reset">reset local storage</button>
+    <button id="show">log local storage</button>
+
+    <div>
+      <ul class="list"></ul>
+    </div>
+  </div>
+
+  <script>
+    logStorage.addEventListener('click', () => console.log(getStorage()));
+  </script>
+  <script src="tasks.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

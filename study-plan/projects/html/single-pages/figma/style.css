@@ -1,0 +1,496 @@
+:root {
+  --t1: 20px;
+  --t2: 16px;
+  --h1: 42px;
+  --h2: 32px;
+  --yellow: #FFC700;
+  --purple: #C7B9FF;
+  --green: #0FA958;
+  --link: #5551ff;
+}
+
+html {
+  font-style: normal;
+  line-height: 1.4;
+  color: #282828;
+  font-kerning: normal;
+  text-size-adjust: 100%;
+  font-family: Whyte, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.mobile {
+  display: block;
+  visibility: visible;
+}
+
+.desktop {
+  display: none;
+  visibility: hidden;
+}
+
+/* global rules */
+
+button {
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  background-color: black;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+button.reverse {
+  color: black;
+  margin-top: 30px;
+  background: none;
+  border: 4px solid black;
+}
+
+.logo {
+  width: 30px;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+/* nav */
+
+nav {
+  margin: 0;
+  padding: 20px;
+  position: relative;
+}
+
+nav ul li:hover {
+  border-bottom: 3px solid #282828;
+}
+
+nav.mobile div.flex {
+  justify-content: space-between;
+}
+
+nav.mobile div.flex div button {
+  margin-right: 10px;
+}
+
+nav.mobile div.flex div i {
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+nav div.flex div ul {
+  list-style: none;
+  text-transform: capitalize;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 0;
+}
+
+/* header */
+header {
+  text-align: center;
+  padding: 70px 32px;
+  min-height: calc(100vh - 200px);
+}
+
+header h1 {
+  font-size: 64px;
+  transform: translate3d(0px, -15px, 0px);
+  max-width: 900px;
+  margin: 0 auto;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: black;
+  text-align: center;
+}
+
+header p {
+  max-width: 528px;
+  line-height: 1.3;
+  margin: 40px auto;
+  font-size: var(--t1);
+  letter-spacing: 0.01em;
+}
+
+header .flex-col {
+  height: 100px;
+  justify-content: space-evenly;
+}
+
+header .flex-col span {
+  border-radius: 50%;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* section general rules */
+section {
+  padding: 48px 32px;
+}
+
+section h2 {
+  font-size: var(--h1);
+  color: black;
+}
+
+/* video-demo section */
+section.demo {
+  padding: 32px;
+  display: block;
+  margin: 0 auto;
+  max-width: 1204px;
+  position: relative;
+}
+
+section.demo .video {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 3px solid black;
+}
+
+section.demo .video * {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* section social */
+section.social {
+  text-align: center;
+}
+
+section.social .grid {
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(3, 77px);
+}
+
+section.social button {
+  color: black;
+  margin-top: 30px;
+  background: white;
+  border: 4px solid black;
+}
+
+/* section images */
+section.images {
+  margin: 0;
+  gap: 48px 16px;
+  max-width: 1272px;
+  padding: 48px 24px;
+  grid-template-columns: 5fr 4fr;
+}
+
+section.images .text {
+  grid-row: 2;
+  padding-top: 0;
+  grid-column: 1 / -1;
+}
+
+section.images div img,
+section.images div svg {
+  display: block;
+  max-width: 100%;
+  margin: 16px auto;
+}  
+
+section.images div img {
+  width: 254px;
+  border-radius: 6px;
+  border: 3px solid black;
+}
+
+section.images .first-images {
+  padding-top: 8px;
+}
+
+/* about */
+section.about {
+  color: white;
+  padding: 80px 24px;
+  background-color: black;
+}
+
+section.about .grid {
+  gap: 48px;
+  grid-template-columns: 1fr;
+}
+
+section.about img {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+section.about div blockquote {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  line-height: 2rem;
+  font-size: var(--h2);
+}
+
+section.about div  p {
+  margin-top: 20px;
+  font-size: var(--t1);
+  letter-spacing: 0.01rem;
+}
+
+/* typing */
+section.collab,
+section.prototyping {
+  background: var(--yellow);
+}
+
+section.prototyping {
+  color: black;
+}
+
+section.prototyping p {
+  font-size: var(--t1);
+}
+
+section.prototyping .grid {
+  grid-gap: 48px;
+  grid-template-columns: 1fr;
+}
+
+section.collab img,
+section.prototyping img {
+  max-width: 100%;
+}
+
+/* diana and lilly */
+section.diana,
+section.lilly {
+  color: black;
+  padding: 80px 24px;
+}
+
+section.diana {
+  background: #C7B9FF;
+}
+
+section.lily {
+  background-color: var(--green);
+}
+
+.profile-grid {
+  gap: 48px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+section.lily img,
+section.diana img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+section.lily blockquote,
+section.diana blockquote {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: var(--h2);
+}
+
+section.lily p,
+section.diana p {
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: var(--t1);
+  letter-spacing: 0.01em;
+}
+
+/* design systems */
+section.design {
+  padding: 48px 32px;
+}
+
+section.design h2 {
+  font-size: var(--h1);
+  font-weight: 700;
+}
+
+section.design div {
+  width: 100%;
+  height: 100%;
+}
+
+section.design video {
+  width: 100%;
+  height: 100%;
+}
+
+/* try figma */
+
+section.tryfigma .login {
+  margin: 0 auto;
+  max-width: 400px;
+  padding-bottom: 80px;
+  display: block;
+}
+
+section.tryfigma .login .inputs {
+  width: 100%;
+}
+
+section.tryfigma .login .inputs input {
+  max-width: 97%;
+}
+
+section.tryfigma .login h2 {
+  font-weight: 700; 
+  text-align: center;
+  font-size: var(--h2);
+}
+
+section.tryfigma .login small {
+  color: #888;
+  display: block;
+  height: 60px;
+  font-size: 16px;
+  line-height: 60px;
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+section.tryfigma input.email {
+  margin-top: 0;
+}
+
+section.tryfigma input,
+section.tryfigma button {
+  display: block;
+  border-radius: 6px;
+  color: black;
+  margin-top: 30px;
+  background: none;
+  height: 44px;
+  border: 4px solid black;
+  width: 100%;
+  padding: 3px;
+}
+
+section.tryfigma input[type="submit"] {
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  background-color: black;
+  cursor: pointer;
+  transition: 0.2s linear; 
+}
+
+section.tryfigma .login .links {
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* footer */
+
+footer {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 56px 24px;
+  grid-gap: 24px;
+}
+
+footer .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: 1 / -1;
+}
+
+footer .title .social {
+  display: flex;
+  align-items: center;
+}
+
+footer .title .social a {
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+footer .title .social a:hover {
+  text-decoration: none;
+}
+
+footer .title .social i {
+  cursor: pointer;
+  font-weight: 700;
+  margin-left: 20px;
+}
+/* 
+footer .gridchild {
+  background-color: blue;
+} */
+
+footer .gridchild ul {
+  padding: 0;
+  line-height: 1.5;
+  list-style-type: none;
+  letter-spacing: 0.02em;
+}
+
+footer .gridchild ul li {
+  margin-bottom: 16px;
+}
+
+footer .gridchild ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer .gridchild h6 {
+  text-transform: capitalize;
+  font-size: 14px;
+  color: black;
+  font-weight: 700;
+  margin: 16px 0;
+}

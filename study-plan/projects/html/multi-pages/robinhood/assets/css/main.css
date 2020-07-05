@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+:root {
+  --white: #fff;
+  --gray: #8f8f8f;
+  --lime: #c3f53c;
+  --pink: rgba(255,90,135,1);
+
+  --bg1: #040d14;
+  --bg2: #100a20;
+  --bg3: rgba(26,17,53,1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: var(--white);
+  background: var(--bg1);
+  font-family: 'Jost', sans-serif;
+}
+
+/* general rules */
+
+.mobile {
+  display: inherit;
+  visibility: visible;
+}
+
+.desktop {
+  display: none;
+  visibility: hidden;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--pink);
+  text-decoration: underline;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.3em;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-transform: capitalize;
+  background-color: var(--pink);
+}
+
+button:hover {
+  background-color: lightcoral;
+}
+
+img {
+  max-width: 100%;
+}
+
+p.info {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.8em;
+  color: var(--gray);
+  text-transform: capitalize;
+}
+
+p.info .icon-info {
+  font-size: 1.5em;
+  margin-right: 5px;
+  position: relative;
+  top: 5px;
+}
+
+p.info:hover {
+  color: var(--pink);
+}
+
+/* nav */
+section.nav {
+  background: var(--bg1);
+  width: 100%;
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: start;
+  text-transform: capitalize;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+section.nav .mobile {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  background: var(--bg1);
+}
+
+section.nav a.logo {
+  height: 35px;
+  width: 142px;
+  display: block;
+}
+
+section.nav a.logo svg {
+  max-width: 100%;
+  fill: var(--white);
+}
+
+section.nav .icon-menu {
+  display: block;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 40px;
+}
+
+section.nav button a {
+  color: black;
+  text-decoration: none;
+}
+
+section.nav button a:hover {
+  color: black;
+}
+
+/* header */
+header {
+  margin-top: 135px;
+  padding: 0 30px;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 28px;
+  font-style: normal;
+  letter-spacing: -0.21px;
+  border-bottom: 1px solid var(--lime);
+}
+
+header .intro h1 {
+  font-weight: 500;
+}
+
+header .img {
+  padding-top: 20px;
+}
+
+header button.desktop a {
+  color: black;
+}
+
+header button.desktop a:hover {
+  text-decoration: none;
+}
+
+/* funds */
+
+section.funds {
+  background: var(--bg3);
+  border-bottom: 1px solid var(--lime);
+}
+
+section.funds .details {
+  padding: 20px;
+  font-size: 13px;
+  color: var(--gray);
+  background-color: var(--bg1);
+}
+
+section.funds .container {
+  padding: 40px 20px;
+}
+
+section.funds .container .img {
+  text-align: center;
+}
+
+section.funds .container .img img {
+  width: 180px;
+}
+
+section.funds .container .content h3 {
+  font-size: 24px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+section.funds .container .content p {
+  margin: 0;
+}
+
+/* footer */
+footer {
+  padding: 30px 10px;
+  background: black;
+}
+
+footer main {
+  position: relative;
+}
+
+footer  hr {
+  margin-top: 30px;
+  border: 1px solid rgba(180, 180, 180, 0.24);
+}
+
+footer .newsletter {
+  width: 95%;
+  margin: 0 auto;
+}
+
+footer .newsletter svg {
+  fill: white;
+}
+
+footer .newsletter form {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+footer .newsletter form input {
+  height: 50px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 50px;
+}
+
+footer section.newsletter form input[type="email"] {
+  background-color: #222;
+  padding-left: 50px;
+  font-size: 1.05em;
+}
+
+footer section.newsletter form input[type="submit"] {
+  cursor: pointer;
+  font-weight: 700;
+  background-color: lime;
+}
+
+footer section.newsletter form input[type="submit"]:hover {
+  background-color: rgb(57, 255, 57);
+}
+
+footer section.links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer section.links ul {
+  width: 40%;
+  display: block;
+}
+
+footer section.links ul li {
+  margin: 10px 0;
+}
+
+footer section.links ul li a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer section.links ul li a:hover {
+  color: lime;
+}
+
+footer section.links ul li a.crypto {
+  color: rgba(255,90,135,1);
+}
+
+footer section.links ul li a.crypto:hover {
+  color: lightcoral;
+}
+
+footer section.links ul.social {
+  display: flex;
+}
+
+footer section.links ul.social li {
+  margin: 0 10px;
+}
+
+footer section.links svg {
+  fill: white;
+}
+
+footer section.country button {
+  display: flex;
+  width: 190px;
+  color: white;
+  font-size: 0.9em;
+  align-items: center;
+  background: transparent;
+  border: 2px solid white;
+  justify-content: space-evenly;
+}
+
+footer section.country button:hover {
+  border: 2px solid rgb(177, 177, 177);
+}
+
+footer section.country svg {
+  width: 17px;
+}
+
+footer section.country svg:last-of-type {
+  fill: white;
+}
+
+footer section.more {
+  padding: 10px;
+}
+
+footer section.more a {
+  font-weight: 600;
+  display: block;
+  cursor: pointer;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+footer section.more a:hover {
+  color: lime;
+}
+
+footer .details {
+  width: 80%;
+  margin: 0 auto;
+  color: #79858b;
+  font-size: 15px;
+}
+
+footer .details p {
+  margin: 20px 0;
+}
+
+footer .details p:last-of-type,
+footer .details p:first-of-type {
+  margin: 30px 0 40px 0;
+}
+
+footer .details a {
+  color: #79858b;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+footer section.details a:hover {
+  color: lime;
+}
+
+footer .details a i.icon-info {
+  font-size: 24px;
+  position: relative;
+  top: 4px;
+}
+
+footer .details a.license {
+  color: lime;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+footer .details a.license:hover {
+  color: lime;
+}
+
+footer .details a span {
+  margin-left: 8px;
+}

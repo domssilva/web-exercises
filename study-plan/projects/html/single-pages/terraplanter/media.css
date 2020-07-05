@@ -1,0 +1,132 @@
+@media (max-width: 749px) {
+  /* global rules */
+
+  .desktop {
+    display: none;
+    visibility: hidden;
+  }
+
+  .mobile {
+    display: block;
+    visibility: visible;
+  }
+
+  .middle {
+    height: auto;
+  }
+
+  .form-container {
+
+  }
+
+  .form-container form {
+    flex-direction: column;
+  }
+  
+  .form-container form input {
+    width: 100%;
+    margin: 12px 0; 
+  }
+
+  .form-container form input[type="submit"] {
+    width: 100%;
+  }
+  
+  /* nav */
+  nav .mobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav .mobile .logo {
+    padding-left: 13px;
+  }
+
+  /* header */
+  header .mobile .flex {
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  header .mobile .flex .text {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  header .mobile .flex img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  header .mobile .container button {
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+  }  
+
+  /* info section */
+  section.info {
+    padding-top: 80px;
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+
+  section.info div {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* sign up */
+  section.middle .signup {
+    padding: 50px 30px;
+  }
+
+  /* beautiful */
+  section.beautiful {
+    height: 380px;
+  }
+
+  section.beautiful .text {
+    padding: 40px 60px 0 40px;
+  }
+
+  /* research and design */
+  main section.research {
+    background-position: left;
+    background-image: url("https://cdn.shopify.com/s/files/1/0285/5917/9829/files/research_mb04.jpg?v=1583335080");
+  }
+
+  main section.research header {
+    width: 50%;
+    min-width: 250px;
+    padding: 45px 0 0 45px;
+  }
+
+  main section.vision {
+    width: 80%;
+    padding: 30px 10px;
+    margin: 0 auto;
+  }
+  
+  main section.images {
+    flex-direction: column;
+  }
+
+  main section.images img {
+    width: 100%;
+  }
+
+  /* footer */
+  footer .social-links ul {
+    justify-content: center;
+    flex-direction: center;
+  }
+
+  footer div {
+    text-align: center;
+  }
+}

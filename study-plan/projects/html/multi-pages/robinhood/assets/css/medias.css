@@ -1,0 +1,300 @@
+:root {
+  --white: #fff;
+  --lime: #c3f53c;
+
+  --bg1: #040d14;
+  --bg2: #100a20;
+  --bg3: #1a1135;
+}
+
+@media (min-width: 780px) {
+
+  section.nav .mobile,
+  .mobile {
+    display: none;
+    visibility: hidden;
+  }
+  
+  section.nav .desktop,
+  .desktop {
+    display: inherit;
+    visibility: visible;
+  }
+
+  /* desktop nav */
+  section.nav {
+    justify-content: space-between;
+  }
+
+  section.nav div.desktop {
+    margin: 0;
+    height: 64px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    background: var(--bg1);
+  }
+
+  section.nav div.desktop nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  section.nav div.desktop nav a {
+    margin-right: 35px;
+  }
+
+  section.nav div.desktop .sign {
+    width: 15%;
+    display: flex;
+    font-weight: 700;
+    min-width: 210px;
+    margin-right: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  /* header */
+  header .intro button {
+    width: auto;
+    display: block;
+    margin: 20px auto;
+  }
+
+  header .intro p {
+    width: 50%;
+    min-width: 600px;
+  }
+
+  header .intro button {
+    font-size: 1em;
+  }
+
+  /* funds */
+  section.funds {
+    position: relative;
+    padding-top: 40px;
+    background: var(--bg3);
+  }
+
+  section.funds .details {
+    top: 10px;
+    right: 20px;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: inherit;
+  }
+
+  section.funds .details span {
+    width: 400px;
+    display: block;
+  }
+
+  section.funds .details span:last-of-type {
+    text-align: right;
+  }
+
+  /* footer */
+  footer main {
+    width: 80%;
+    margin: 30px auto;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-rows: 320px auto auto;
+    grid-template-areas: 
+      "links links newsletter newsletter"
+      "country country more more"
+      "country country more more";
+  }
+
+  footer section.links {
+    grid-area: links;
+    display: grid;
+    grid-template-areas: 
+    "first second third"
+    "first second third"
+    ". . fourth";
+  }
+
+  footer section.links ul {
+    padding: 0;
+    margin: 0;
+    width: 96px;
+  }
+
+  footer section.links ul:first {
+    grid-area: first;
+  }
+
+  footer section.links ul:nth-of-type(2) {
+    grid-area: second;
+  }
+
+  footer section.links ul:nth-of-type(3) {
+    grid-area: third;
+  }
+
+  footer section.links ul:nth-of-type(4) {
+    grid-area: fourth;
+  }
+
+  footer section.links ul.social {
+    width: 110px;
+    height: 90px;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 50px;
+  }
+
+  footer section.newsletter {
+    margin: 0;
+    max-width: 400px;
+    justify-self: flex-end;
+    grid-area: newsletter;
+  }
+
+  footer section.country {
+    grid-area: country;
+  }
+
+  footer section.more {
+    grid-area: more;
+  }
+
+  footer section.country {
+    width: 200px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    left: 5%;
+  }
+
+  footer section.country button {
+    height: 45px;
+  }
+
+  footer section.more {
+    margin: 0;
+    padding: 0;
+    width: 420px;
+    text-align: right;
+    justify-self: flex-end;
+  }
+  
+  footer section.more a {
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  header {
+    display: grid;
+    padding: 0 150px 80px 150px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+  header .intro .text {
+    min-width: 500px;
+    line-height: 1.2;
+    font-size: 1.5em;
+  }
+
+  header .intro .btns {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  header .intro button {
+    margin: 0;
+    width: 200px;
+    display: inline;
+  }
+
+  header .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* funds */
+  section.funds {
+    position: relative;
+    padding-top: 40px;
+  }
+
+  section.funds .details {
+    position: absolute;
+  }
+
+  section.funds .container {
+    display: flex;
+  }
+
+  section.funds .container .img {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  section.funds .container .img img {
+    width: 240px;
+  }
+
+  section.funds .container .content {
+    width: 50%;
+    display: flex;
+    padding-left: 80px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  section.funds .container .content h3 {
+    font-size: 56px;
+  }
+
+  footer .newsletter form {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+  }
+
+  footer main .newsletter form input[type="email"] {
+    height: 60px;
+    width: 100%;
+  }
+
+  footer .newsletter form input[type="submit"] {
+    right: 10px;
+    bottom: 6px;
+    width: 130px;
+    position: absolute;
+  }
+
+  footer main {
+    grid-template-rows: 280px auto auto;
+  }
+
+  footer main,
+  footer section.details {
+    width: 70%;
+  }
+}

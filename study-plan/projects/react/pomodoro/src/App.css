@@ -1,0 +1,112 @@
+:root {
+  --blue: #438a8f;
+  --white: whitesmoke;
+  --black: #111;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: white;
+  background: var(--black);
+  overflow: hidden;
+}
+
+h1 {
+  top: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.controllers {
+  display: flex;
+  width: 500px;
+  margin: 80px auto;
+  justify-content: center;
+}
+
+.controllers hr {
+  margin: 50px;
+}
+
+.controllers .container-label {
+  position: relative;
+}
+
+.controllers .container-label h3 {
+  transform: rotate(90deg);
+  position: relative;
+  top: 55px;
+  margin: 0;
+}
+
+.controllers .container {
+  text-align: center;
+  background-color: #121212;
+}
+
+.controllers .container button {
+  width: 30px;
+  height: 60px;
+  background: #161616;
+  cursor: pointer;
+  border: none;
+  color: whitesmoke;
+  transition: all 0.3s linear;
+}
+
+.controllers .container button:hover {
+  background-color: #222;
+}
+
+main {
+  width: 500px;
+  padding: 1em;
+  font-size: 3em;
+  margin: 20px auto;
+  text-align: center;
+  background-color: var(--blue);;
+}
+
+#session-label {
+  top: -20px;
+  position: relative;
+  font-size: 0.8em;
+}
+
+#start_stop {
+  margin-right: 50px;
+}
+
+button {
+  border: 3px solid whitesmoke;
+  background: none;
+  padding: 5px;
+  width: 120px;
+  cursor: pointer;
+  transition: all .3s linear;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+button:hover {
+  background: #333;
+  color: var(--white);
+}
+
+.pomodori {
+  height: 50px;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pomodori img {
+  margin-right: 5px;
+}

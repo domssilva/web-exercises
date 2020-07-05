@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+/* global rules */
+:root {
+  --black: #332b26;
+  --gray: #f8f6f5;
+  --gray2: #949494;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-style: normal;
+  overflow-x: hidden;
+  color: var(--black);
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.desktop {
+  display: block;
+  visibility: visible;
+}
+
+.mobile {
+  display: none;
+  visibility: hidden;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px;
+  color: white;
+  font-size: 1.3em;
+  font-weight: 700;
+  text-align: center;
+  background: var(--black);
+}
+
+h4 {
+  line-height: 1.2;
+  font-weight: 900;
+  font-size: 1.6em;
+  word-wrap: break-word;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin-block-end: 1em;
+  margin-inline-end: 0px;
+  margin-block-start: 1em;
+  margin-inline-start: 0px;
+  text-align: left !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.middle {
+  height: 150px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray);
+}
+
+.form-container div {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-container div p {
+  text-align: center !important;
+}
+
+.form-container form {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container form input {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 40px;
+  border: none;
+  display: inline-block;
+  border: 1px solid var(--black);
+}
+
+.form-container form input::placeholder {
+  font-size: 1.2em;
+  padding-left: 15px;
+}
+
+.form-container form input[type="submit"] {
+  width: 140px;
+  border: none;
+  color: white;
+  background-color: var(--black);
+}
+
+/* nav */
+
+nav {
+  padding: 5px;
+}
+
+nav .logo {
+  cursor: pointer;
+}
+
+nav div.desktop {
+  padding: 0 55px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav div.desktop .links ul li {
+  margin: 0 15px;
+}
+
+nav ul li {
+  text-transform: capitalize;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+nav .icons i {
+  font-size: 1.2em;
+  font-weight: 900;
+  width: 15%;
+  justify-content: space-between;
+  padding-right: 13px;
+}
+
+nav .icons i:hover {
+  color: #555;
+  cursor: pointer;
+}
+
+/* header */
+
+header .text {
+  align-self: center;
+}
+
+header .flex img {
+  display: block;
+  width: 100%;
+}
+
+header .desktop {
+  width: 100%;
+}
+
+header .desktop .flex {
+  padding: 40px;
+}
+
+header .desktop .text {
+  padding-left: 45px;
+}
+
+header .desktop .text p {
+  width: 80%;
+  max-width: 700px;
+}
+
+header .desktop .flex .container {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* info section */
+
+section.info {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 120px;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+}
+
+section.info div {
+  max-width: 590px;
+  max-height: 530px;
+}
+
+section.info img {
+  max-width: 100%;
+}
+
+/* beautiful */
+section.beautiful {
+  width: 100%;
+  height: 475px;
+  vertical-align: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("https://cdn.shopify.com/s/files/1/0285/5917/9829/files/14_141e0cda-b836-4dc0-b2ca-96849d837fc4_900x.jpg?v=1583935634");
+}
+
+section.beautiful .text {
+  width: 40%;
+  padding: 55px;
+  min-width: 250px;
+  padding-top: 180px;
+  padding-left: 100px;
+}
+
+section.beautiful .text h4 {
+  margin: 0;
+}
+
+/* choices */
+section.choices {
+  width: 100%; 
+  padding-top: 50px;
+}
+
+section.choices img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* research & design */
+main section.research {
+  height: 400px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.shopify.com/s/files/1/0285/5917/9829/files/20.jpg?v=1583250945")
+}
+
+main section.research header {
+  max-width: 400px;
+  padding: 160px 0 0 180px;
+  text-align: left !important;
+}
+
+main section.research header h4 {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+main section.vision {
+  width: 50%;
+  margin: 80px 0 0 25%;
+}
+
+main section.vision .quote {
+  width: 50%;
+  font-weight: 900;
+  margin: 70px auto;
+  font-size: 1.3rem;
+  text-align: center;
+  min-width: 340px;
+}
+
+main section.vision ul li {
+  list-style: disc;
+  margin: 20px 0;
+}
+
+main section.images {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  margin: 80px 0 0 8%;
+}
+
+main section.images img {
+  width: 300px;
+  padding: 5px;
+  display: block;
+}
+
+main button {
+  display: block;
+  padding: 20px 90px;
+  margin: 30px auto;
+  text-transform: uppercase;
+}
+
+/* footer */
+footer {
+  padding: 20px;
+}
+
+footer .social-links ul {
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer .social-links li a svg {
+  width: 20px;
+  margin: 0 15px 0 0;
+  color: black;
+}
+
+footer .social-links li a svg:hover {
+  color: black;
+}
+
+footer div {
+  text-align: left;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS GRID</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>The Grid System</h1>
+    <div>
+      <nav role="navigation">
+      <ul>
+        <li>
+          <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">css tricks</a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target="_blank">MDN grid layout guide</a>
+        </li>
+      </ul>
+    </nav>
+      <form>
+        <!-- 
+          Let user define grid-container width and height
+        -->
+        <fieldset>
+          <label>Grid Container Width:</label>
+          <input type="number" id="grid-container-width" placeholder="600"/>
+        </fieldset>
+        <fieldset>
+          <label>Grid Container Height:</label>
+          <input type="number" id="grid-container-height" placeholder="300"/>
+        </fieldset>
+        <fieldset>
+          <input id="update-grid-btn" type="submit" value="Update Grid Container Size">
+        </fieldset>
+      </form>
+    </div>
+    <div class="btn-container">
+      <button id="add-box-btn">Add Box!</button>
+      <button id="clear-boxes-btn">Remove All Boxes</button>
+    </div>
+  </header>
+  <section class="grid-container">
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

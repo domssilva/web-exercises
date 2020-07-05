@@ -1,0 +1,182 @@
+@media (max-width: 360px) {
+  header h1 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 850px) {
+  .mobile {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .desktop {
+    display: block;
+    visibility: visible;
+  }
+
+  /* nav */
+  
+  nav.desktop .flex {
+    height: 60px;
+    justify-content: space-between;
+  }
+
+  nav.desktop .flex div ul {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  nav.desktop .flex div ul li {
+    margin: 0 10px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* header */
+
+  header .flex-col {
+    margin: 20px auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header .flex-col button {
+    margin-right: 30px;
+  }
+
+  /* section social */
+  section.social .grid {
+    grid-template-columns: repeat(auto-fit,77px);
+  }
+
+  /* section images */
+  section.images {
+    gap: 48px 32px;
+    margin: 0 auto;
+    max-width: 1272px;
+    grid-template-columns: 10fr 9fr 6fr;
+  }
+
+  section.images svg,
+  section.images img {
+    width: 70%;
+    max-width: 100%;
+  }
+
+  section.images .text {
+    grid-row: 1;
+    grid-column: 1;
+    padding-top: 160px;
+  }
+
+  section.images .first-images {
+    grid-column: 2;
+  }
+
+  section.images .second-images {
+    grid-column: 3;
+  }
+
+  /* prototyping */
+  section.prototyping .grid {
+    grid-gap: 64px;
+    align-items: center;
+    grid-template-columns: 5fr 9fr;
+  }
+
+  section.prototyping .grid .content {
+    grid-row: 1;
+  }
+
+  /* collab */
+  section.collab .grid {
+    gap: 32px;
+    justify-content: space-between;
+    max-width: 1166px;
+    grid-template-columns: 4fr 3fr;
+  }
+
+  /* diana and lilly */
+  .profile-grid  {
+    margin: 0 auto;
+    max-width: 1140px;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: minmax(auto, 568px) 200px;
+  }
+
+  .profile-grid img {
+    order: 2;
+  }
+
+  /* about */
+  section.about {
+    padding: 96px 32px;
+  }
+
+  section.about .grid {
+    gap: 48px;
+    max-width: 1140px;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: 200px minmax(auto, 568px);
+  }
+
+  /* design */
+  section.design .grid {
+    grid-gap: 64px;
+    margin: 0 auto;
+    max-width: 1200px;
+    align-items: center;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  section.design .grid .content {
+    grid-row: 1;
+  }
+
+  section.about .grid img {
+    width: 200px;
+  }
+
+  /* footer */
+  footer {
+    max-width: 1272px;
+    margin: 0 auto;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  footer .title {
+    grid-column: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  footer .title h2 {
+    margin-top: 0;
+  }
+
+  footer .title .social {
+    flex-direction: column;
+    width: 100px;
+    align-items: center;
+  }
+
+  footer .title .social a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  footer .title .social span {
+    margin-left: 20px;
+  }
+
+  footer .title .social i {
+    margin-left: 0;
+  }
+
+}
