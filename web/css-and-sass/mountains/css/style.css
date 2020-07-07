@@ -1,0 +1,166 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+  a:hover {
+    color: #111; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Work Sans', sans-serif; }
+
+.header__title {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 5.5rem; }
+
+.header__text {
+  font-size: 2rem;
+  line-height: 2.5rem; }
+
+nav {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333; }
+
+.margin-bottom-s {
+  margin-bottom: 1rem; }
+
+.margin-bottom-m {
+  margin-bottom: 3rem; }
+
+.margin-bottom-l {
+  margin-bottom: 5rem; }
+
+.margin-bottom-xl {
+  margin-bottom: 8rem; }
+
+.margin-right-s {
+  margin-right: 1rem; }
+
+.margin-right-m {
+  margin-right: 3rem; }
+
+.margin-right-l {
+  margin-right: 5rem; }
+
+/*
+@import "components/card";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/story";
+@import "components/bg-video";
+@import "components/form";
+*/
+.btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  border-radius: 3px;
+  padding: 1.5rem 3rem;
+  text-transform: uppercase;
+  transition: all .3s; }
+  .btn--white {
+    background: rgba(255, 255, 255, 0.8); }
+    .btn--white:hover {
+      background: #1967c0;
+      color: white; }
+  .btn--blue {
+    background: rgba(25, 103, 192, 0.8);
+    color: white; }
+    .btn--blue:hover {
+      background: white;
+      color: #1967c0; }
+
+.nav {
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  position: absolute;
+  top: 0;
+  text-transform: uppercase; }
+  .nav a:hover {
+    border-bottom: 0.14rem solid #111;
+    padding-bottom: 0.15rem; }
+
+.header {
+  height: 100vh;
+  background-size: cover;
+  background-position: 0 -5.5rem;
+  background-repeat: no-repeat;
+  background-image: url(../../img/header_bg-big.png); }
+  .header__content {
+    width: 60rem;
+    height: 40rem;
+    transform: translate(5rem, 15rem); }
+  .header__title {
+    color: #111; }
+  .header__text {
+    width: 85%;
+    color: #333; }
+
+/*
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/navigation";
+*/

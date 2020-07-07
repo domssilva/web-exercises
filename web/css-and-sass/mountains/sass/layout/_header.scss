@@ -1,0 +1,23 @@
+.header {
+  height: 100vh;
+
+  background-size: cover;
+  background-position: 0 -5.5rem;
+  background-repeat: no-repeat;
+  background-image: url(../../img/header_bg-big.png);
+
+  &__content {
+    width: 60rem;
+    height: 40rem;
+    transform: translate(5rem, 15rem);
+  }
+
+  &__title {
+    color: $color-black-1;
+  }
+
+  &__text {
+    width: 85%;
+    color: $color-black-2;
+  }
+}

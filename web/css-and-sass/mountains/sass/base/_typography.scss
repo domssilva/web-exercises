@@ -1,0 +1,28 @@
+html {
+	font-size: 62.5%; // 100% (1rem = 10px)
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.header {
+
+  &__title {
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 5.5rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+}
+
+nav {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $color-black-2;
+}
