@@ -1,0 +1,17 @@
+@import '../sass/all';
+
+.container {
+
+  margin-top: 12rem;
+
+  @include adapt(tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include adapt (desktop) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+  }
+  
+}

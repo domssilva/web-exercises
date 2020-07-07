@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "./card.scss";
+import './card.scss';
 
 const Card = ({user}) => {
 
@@ -11,11 +11,14 @@ const Card = ({user}) => {
     <section className="section__card">
       <div className="section__card-title">
         <div className="section__card-image-container">
-          <img className="section__card-image" src={randomPic} alt="random pic" />
+          <img 
+            className="section__card-image" 
+            src={randomPic} alt="random pic" 
+          />
         </div>
-        <div className="section_card-user">
+        <div className="section__card-user">
           <small>{today}</small>
-          <h1>{user.username}:</h1>
+          <h1>{user.username} says:</h1>
         </div>
       </div>
       <div className="card__body">
@@ -24,11 +27,11 @@ const Card = ({user}) => {
         </div>
         <div className="card__body-options">
           <a href="#">
-            <i className="fa fa-thumbs-up" aria-hidden="true" />
+            <i className="fa fa-thumbs-up" id="like" aria-hidden="true" />
             <small>{user.likes}</small>
           </a>
           <a href="#">
-            <i className="fa fa-thumbs-down" aria-hidden="true" />
+            <i className="fa fa-thumbs-down" id="dislike" aria-hidden="true" />
             <small>{user.dislikes}</small>
           </a>
           <a href="#">
@@ -36,7 +39,7 @@ const Card = ({user}) => {
               className="bi bi-chat"
               width="1em"
               height="1em"
-              viewBox="0 0 16 16"
+              viewBox="0 0 16 16"id="like"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >

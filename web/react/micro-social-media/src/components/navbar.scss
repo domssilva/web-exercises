@@ -1,0 +1,49 @@
+@import '../sass/_all.scss';
+
+nav.main {
+  top: 0;
+  margin: 0;
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  position: fixed;
+  color: $font;
+  font-weight: 900;
+  background-color: $cardbg;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 300;
+
+  & .icon-menu {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: none;
+    border: none;
+    height: 35px;
+
+    &:hover span {
+      background: $font;
+    }
+
+    & span {
+      height: 1px;
+      width: 35px;
+      background: $white;
+      display: inline-block;
+    }
+  }
+
+  & .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 40px;
+      margin-right: 20px;
+    }
+  }
+}

@@ -1,12 +1,5 @@
+@import './sass/all';
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap");
-
-:root {
-  --cardbg: #c0a586;
-  --font: #49392e;
-  --gray: #c9c9c9;
-  --black: #333;
-  --white: #e0e0e0;
-}
 
 * {
   margin: 0;
@@ -20,11 +13,15 @@ html {
   height: 100%;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
-  font-size: 16px;
-  color: var(--black);
+  font-size: 1.6rem;
+  color: $black;
   overflow-x: hidden;
-  background: var(--gray);
+  background: $gray;
   font-family: "DM Mono", monospace;
 }
 
@@ -39,10 +36,5 @@ li {
 }
 
 a {
-  color: var(--font);
-}
-
-a:hover {
-  text-decoration: underline;
-  color: brown;
+  color: $font;
 }

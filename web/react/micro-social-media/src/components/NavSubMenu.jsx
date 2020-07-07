@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./navsubmenu.css";
+import "./navsubmenu.scss";
 
 const NavSubMenu = props => {
   let classes = ["submenu"];
