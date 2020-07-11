@@ -126,7 +126,16 @@ The main goal of this section is to understand WHY a library/framework helps so 
   * [x] ![frontend certification](public/FCC_frontend_libraries.png)
 * [ ] Learn Redux
 
-## 4 - NodeJS/express, MySQL
+## 4 - Job hunt projects to have:
+Don't use toy projects in your portfolio. Show that you can build professional looking websites/apps
+
+* [x] Portfolio
+* [ ] Restaurant website
+* [ ] Digital Agency website
+* [ ] Real estate web app
+* [ ] E-commerce web app
+
+## 5 - NodeJS/express, MySQL
 ### Section Objectives
 Understanding the basics of server-side programming will enrich your knowledge about dynamic applciations and data processing. By learning nodeJS and it's ecosystem you'll get a powerfull toolbox letting you use javascript in both frontend and backend.
 
