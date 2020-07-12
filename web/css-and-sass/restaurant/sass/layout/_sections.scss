@@ -1,0 +1,60 @@
+.farm,
+.fresh {
+  position: relative;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  color: $grey-dark-3;
+
+  &__img {
+    top: -3rem;
+    position: absolute;
+    height: 50rem;
+    width: 34rem;
+    background-size: cover;
+    box-shadow: $shadow-light;
+    border-radius: $border-rad;
+  }
+}
+
+.grey-stripe {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background: $grey-light-1;
+  padding: $section-padding;
+
+  .block {
+    min-height: inherit;
+
+    h2 {
+      color: $black;
+      font-weight: 300;
+    }
+  }
+}
+
+.farm {
+  
+  &__img {
+    left: $section-images-distance;
+    background-image: url("../../images/farm.jpg");
+  }
+
+  .grey-stripe {
+    justify-content: flex-end;
+  }
+}
+
+.fresh {
+  margin-top: 15rem;
+  
+  &__img {
+    right: $section-images-distance;
+    background-image: url("../../images/pasta-fresca.jpg");
+  }
+
+  .grey-stripe {
+    justify-content: flex-start;
+  }
+}

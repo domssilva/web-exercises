@@ -1,0 +1,222 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,600;1,400&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a:visited,
+a:link,
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent; }
+
+section {
+  min-height: 60vh;
+  padding: 10rem; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300; }
+
+.title {
+  text-transform: capitalize;
+  font-size: 3rem; }
+
+.farm,
+.fresh {
+  position: relative;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  color: #333; }
+  .farm__img,
+  .fresh__img {
+    top: -3rem;
+    position: absolute;
+    height: 50rem;
+    width: 34rem;
+    background-size: cover;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+    border-radius: 3px; }
+
+.grey-stripe {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background: #f7f7f7;
+  padding: 10rem; }
+  .grey-stripe .block {
+    min-height: inherit; }
+    .grey-stripe .block h2 {
+      color: #000;
+      font-weight: 300; }
+
+.farm__img {
+  left: 10rem;
+  background-image: url("../../images/farm.jpg"); }
+
+.farm .grey-stripe {
+  justify-content: flex-end; }
+
+.fresh {
+  margin-top: 15rem; }
+  .fresh__img {
+    right: 10rem;
+    background-image: url("../../images/pasta-fresca.jpg"); }
+  .fresh .grey-stripe {
+    justify-content: flex-start; }
+
+.header {
+  min-height: 85vh;
+  background-color: #000;
+  padding: 4rem 10rem;
+  color: #c2c2c2;
+  position: relative; }
+  .header__title {
+    z-index: 100;
+    position: relative;
+    color: #f7f7f7; }
+  .header__image {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50rem;
+    width: 35rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../images/pasta.jpg"); }
+  .header__backdrop {
+    height: 100%;
+    width: 100%;
+    background: rgba(92, 92, 92, 0.25);
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .header .block {
+    z-index: 100;
+    position: relative;
+    top: 8rem; }
+
+.btn {
+  margin-top: 2rem; }
+
+.reservations {
+  margin-top: 15rem;
+  position: relative;
+  right: 0; }
+  .reservations .block {
+    color: #fff;
+    top: 0; }
+    .reservations .block__text {
+      font-weight: 300; }
+  .reservations__container {
+    top: 5rem;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 10rem; }
+  .reservations__form {
+    right: 10rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 3px;
+    width: 30rem;
+    display: flex;
+    flex-direction: column; }
+  .reservations__img {
+    height: 50rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../images/restaurant.jpg"); }
+
+input {
+  border: none;
+  border-bottom: 1.5px solid #aaaaaa;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  margin: 1rem 2rem;
+  background: none;
+  transition: all .2s; }
+
+label {
+  visibility: hidden;
+  display: none; }
+
+.btn {
+  width: 17rem;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #f7f7f7;
+  padding: 1.5rem 2.7rem;
+  font-size: .9rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  transition: background .5s; }
+  .btn--reverse {
+    background-color: #000; }
+
+.btn:hover {
+  color: #000;
+  background-color: #aaaaaa; }
+
+.block {
+  position: relative;
+  width: 36rem;
+  max-height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .block__title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 2rem; }
+  .block__text {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    font-weight: 600;
+    word-spacing: .35rem; }

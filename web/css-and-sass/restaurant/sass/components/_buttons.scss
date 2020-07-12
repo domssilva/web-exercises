@@ -1,0 +1,22 @@
+.btn {
+  width: 17rem;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid $grey-light-1;
+  padding: 1.5rem 2.7rem;
+  font-size: .9rem;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  transition: background .5s;
+
+  &--reverse {
+    background-color: $black;
+  }
+}
+
+.btn:hover {
+  color: $black;
+  background-color: $grey-light-3;
+}

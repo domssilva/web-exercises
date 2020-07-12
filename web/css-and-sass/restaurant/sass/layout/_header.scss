@@ -1,0 +1,48 @@
+.header {
+  min-height: $header-height;
+  background-color: $black;
+  padding: 4rem $section-padding;
+  color: $grey-light-2;
+  position: relative;
+
+  &__title {
+    z-index: 100;
+    position: relative;
+    color: $grey-light-1;
+  }
+
+  &__image {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    height: 50rem;
+    width: 35rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../images/pasta.jpg");
+
+    // transform: rotate(180deg);
+  }
+
+  &__backdrop {
+    height: 100%;
+    width: 100%;
+    background: rgba($grey-dark-1, .25);
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .block {
+    z-index: 100;
+    position: relative;
+    top: 8rem;
+  }
+}
+
+.btn {
+  margin-top: 2rem;
+}

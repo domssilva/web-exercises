@@ -1,0 +1,46 @@
+.reservations {
+
+  margin-top: 15rem;
+  position: relative;
+  right: 0;
+
+  .block {
+    color: $white;
+    top: 0;
+
+    &__text {
+      font-weight: 300;
+    }
+  }
+  
+  &__container {
+    top: 5rem;
+    width: 100%;
+    position: absolute;
+
+    display: flex;
+    justify-content: space-between;
+    padding: $section-padding;
+  }
+
+  &__form {
+    right: $section-padding;
+    background-color: rgba($white, .95);
+    border-radius: $border-rad;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__img {
+    height: 50rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+      to right,
+      rgba($black, .7),
+      rgba($black, .7)
+    ), url("../../images/restaurant.jpg");
+  }
+}
