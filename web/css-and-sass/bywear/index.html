@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bywear</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <section class="content">
+      <header class="header">
+        <div class="header__top">
+          <a href="/" class="header__logo">
+            bywear
+          </a>
+          <input type="search" class="header__search" placeholder="search">
+        </div>
+      </header>
+      <div class="header__content">
+
+        <section class="header__social">
+          <a href="#">
+            <svg class="header__social-icon">
+              <use xlink:href="./assets/imgs/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="header__social-icon">
+              <use xlink:href="./assets/imgs/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="header__social-icon">
+              <use xlink:href="./assets/imgs/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </section>
+        <section class="header__main">
+          <h1 class="header__title">
+            <span class="orange">Streetwear</span>
+            <br/>
+            <span class="white">guide</span>
+            <span class="orange">20'</span>
+          </h1>
+          <p class="header__text">
+            Your personal guidebook for summer 2020 streetwear styles that are truly lit and bring in the heat in the lit.
+          </p>
+        </section>
+      </div>
+    </section>
+    <section class="photo">
+      <div class="photo__container" id="gallery">
+        <img src="./assets/imgs/models.jpg" alt="clothing" class="photo__img selected">
+        <img src="./assets/imgs/girl.jpg" alt="clothing" class="photo__img">
+        <img src="./assets/imgs/models2.jpg" alt="clothing" class="photo__img">
+        <img src="./assets/imgs/guy.jpg" alt="clothing" class="photo__img">
+      </div>
+    </section>
+    <section class="navigation">
+      <a href="#menu" class="navigation__anchor">
+        <svg class="navigation__icon">
+          <use xlink:href="./assets/imgs/icons.svg#icon-list"></use>
+        </svg>
+      </a>
+      <nav class="navigation__nav" id="menu" role="navigation">
+        <a href="#" class="navigation__link navigation__link--close flex-end">X</a>
+        <a href="/" class="navigation__link">home</a>
+        <a href="#about" class="navigation__link">about</a>
+        <a href="#store" class="navigation__link">store</a>
+        <a href="#store" class="navigation__link">location</a>
+      </nav>
+    </section>
+  </div>
+
+  <script src="./assets/js/gallery.js"></script>
+</body>
+</html>
