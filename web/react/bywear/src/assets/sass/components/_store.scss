@@ -1,0 +1,14 @@
+.content-store {
+    color: $white;
+
+    &__container {
+        border: 1px solid purple;
+        overflow-y: scroll;
+    }
+}
+
+.box {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid yellow;
+}

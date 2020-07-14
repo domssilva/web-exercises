@@ -1,0 +1,136 @@
+.header {
+  color: $white;
+  
+  & > * {
+    display: inline-block;
+  }
+  
+  // top = header logo and search bar
+  &__top {
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-size: 2rem;
+    color: $white;
+  }
+
+  &__search {
+    border-bottom: 1px solid $white;
+    flex: 0 0 60%;
+
+    padding-left: .2rem;
+    padding-bottom: .5rem;
+
+    &::placeholder {
+      color: $white;
+      font-family: inherit;
+      letter-spacing: .05rem;
+    }
+
+    @include adapt(phone) {
+      @include hide;
+    }
+  }
+
+  // header content
+  &__content {
+
+    padding-top: 10rem;
+    height: 30rem;
+
+    display: flex;
+
+    @include adapt(tablet) {
+      flex-direction: column-reverse;
+      height: 95%;
+    }
+
+    @include adapt(phone) {
+      padding-top: 2rem;
+    }
+
+  }
+
+  &__social {
+    max-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      &:not(:last-of-type) {
+        margin-bottom: 5rem;
+      }
+    }
+
+    &-icon {
+      box-sizing: content-box;
+      display: inline-block;
+      fill: $white;
+      transition: $svg-transition;
+    }
+
+    @include adapt(tablet) {
+      max-width: initial;
+      width: 100%;
+      flex-direction: row;
+
+      a {
+
+        margin-bottom: 5rem;
+        
+        &:not(:last-of-type) {
+          margin-right: 5rem;
+        }
+      }
+      
+    }
+  }
+
+  &__main {
+    flex: 1;
+    color: $white;
+    padding-left: 15rem;
+    
+    @include adapt(tablet) {
+      padding-left: 5rem;
+    }
+
+    @include adapt(phone) {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 600;
+
+    @include adapt(phone) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__text {
+    margin-top: 3rem;
+    max-width: 35rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    letter-spacing: .22rem;
+    font-weight: 400;
+  }
+}
+
+a:hover .header__social-icon {
+  fill: $primary-1;
+}

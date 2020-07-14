@@ -1,0 +1,96 @@
+.container {
+
+  top: 3rem;
+  height: 90vh;
+
+  min-height: 35rem;
+
+  max-width: 150rem;
+  max-height: 100rem;
+  
+  margin: auto;
+  display: flex;
+
+  box-shadow: $shadow;
+  border-radius: $border-radius;
+
+  @include adapt(desktop) {
+    top: 0;
+    margin: 0;
+  }
+
+  @include adapt(tablet) {
+
+    background: $blue-light;
+
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+
+    grid-template: 
+      [row1-start] "nav nav" 8rem [row1-end]
+      [row2-start] "content gallery" auto [row2-end]
+      / auto 40%;
+  }
+
+  @include adapt(phone) {
+    max-height: unset;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $primary-1;
+  }
+
+}
+
+.content {
+  
+  @include adapt(tablet) {
+    grid-area: content;
+  }
+
+  @include adapt(phone) {
+    order: 2;
+  }
+}
+
+.content-store,
+.content-location {
+  grid-column-start: content;
+  grid-column-end: gallery-end;
+}
+
+.photo {
+  
+  flex: 0 0 50%;
+  
+  @include adapt(desktop) {
+    flex: 0 0 40%;
+    max-width: 45rem;
+  }
+
+  @include adapt(tablet) {
+    grid-area: gallery;
+  }
+
+  @include adapt(phone) {
+    order: 3;
+  }
+  
+}
+
+.navigation {
+  grid-area: nav;
+  height: 100%;
+  background: $blue-light;
+  flex: 0 0 6%;
+
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+
+  @include adapt(phone) {
+    order: 1;
+    flex: 0;
+  }
+}
