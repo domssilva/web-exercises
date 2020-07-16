@@ -1,14 +1,16 @@
 .navigation {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 
   padding: 3rem 0;
   position: relative;
 
   @include adapt(tablet) {
     width: 100%;
-    justify-content: flex-end;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
     padding: 2rem 4rem;
   }
 
@@ -17,6 +19,12 @@
     height: 3rem;
     display: inline-block;
     transition: $svg-transition;
+    margin-bottom: 1.5rem;
+
+    @include adapt(tablet) {
+      margin-bottom: 0;
+      margin-left: 1.5rem;
+    }
   }
 
   &__anchor:hover &__icon {
@@ -106,7 +114,7 @@
   }
 
   to {
-    width: 35rem;
+    width: 30rem;
   }
 }
 
