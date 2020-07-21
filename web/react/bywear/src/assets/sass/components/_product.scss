@@ -33,10 +33,10 @@
             margin-bottom: 2rem;
         }
 
-        &-price,
-        &-submit {
+        &-price {
             display: inline-block;
             align-self: center;
+            padding-bottom: 5rem;
         }
 
         &-price {
@@ -52,22 +52,38 @@
 
     // [RIGHT SIDE] product info
     &__info {
-
         flex-grow: 1;
         padding-left: inherit;
         
         display: flex;
+        justify-content: space-between;
         flex-direction: column;
+
+        &-top {
+            min-height: 15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &-bottom {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+        }
 
         &-name {
             font-size: 2rem;
-            margin: 2rem 0;
         }
 
         &-rating {
-            margin-bottom: 2rem;
+            $starsize: 1.8rem;
             
             svg {
+                height: $starsize;
+                width: $starsize;
                 fill: #ffe600;
 
                 &:not(:last-of-type) {
@@ -81,17 +97,16 @@
             max-width: 20.5rem;
             line-height: 1.3;
             font-size: 1.35rem;
-            margin-bottom: 2rem;
         }
 
-        &-sizes {
+        &-input {
 
             font-size: 1.3rem;
             display: grid;
             grid-gap: 1rem;
             grid-template-columns: repeat(3, 2.5rem);
 
-            &-box {
+            &-label {
                 cursor: pointer;
 
                 width: 2.5rem;
@@ -101,12 +116,19 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                transition: background-color .2s linear;
+                background-color: transparent;
+                color: $white;
             }
 
-            & .selected,
-            &-box:hover {
+            &-radio {
+                display: none;
+            }
+
+            &-radio:checked + &-label {
                 color: $black;
-                background: $white;
+                background-color: $white;
             }
         }
 

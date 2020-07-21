@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 
 import HeaderNav from './HeaderNav';
 import Product from './Product';
@@ -8,7 +7,7 @@ import Product from './Product';
 import merchList from './Product.data';
 // this data will be fetched from contentful
 
-const Shop = () => {
+const Shop = (props) => {
 
     return (
         <section className='content content-store'>

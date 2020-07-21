@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import Shop from '../components/Shop';
 import Navigation from '../components/Navigation';
 
-export default function Location() {
+ const Location = () => {
+
+    
+
     return (
         <div className="container">
             <Shop/>
@@ -11,3 +14,5 @@ export default function Location() {
         </div>
     )
 }
+
+export default Location;

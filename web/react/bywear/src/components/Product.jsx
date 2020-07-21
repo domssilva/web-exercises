@@ -4,36 +4,120 @@ import icons from '../assets/imgs/icons.svg';
 
 export default function Product({name, img, price, rating, id, description}) {
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        
+        let selectedRadio = document.querySelector("input[name='size']:checked");
+        let productId = selectedRadio.id.split('-')[0];
+        let productSize = selectedRadio.value;
+
+        console.log(productId);
+    }
+
     return (
     <div className="product__container">
         <div className="product__cta">
             <img className="product__cta-img" src={img} alt="clothes"/>
             <div className="product__cta-price">{price} €</div>
-            <form action={`#${id}`} className="product__cta-submit">
-                <input type="submit" className="btn" value="aggiungi al carrello"/>
-            </form>
         </div>
         <div className="product__info">
-            <h3 className="product__info-name">{name}</h3>
-            <div className="product__info-rating">
-                {
-                    Array(rating).fill('x').map(num => 
-                        <svg key={num} className='header__social-icon'>
-                           <use xlinkHref={`${icons}#icon-star-full`}/>
-                        </svg>
-                    )
-                }
+            <div className="product__info-top">
+                <h3 className="product__info-name">{name}</h3>
+                <div className="product__info-rating">
+                    {
+                        Array(rating).fill('x').map(num => 
+                            <svg key={num} className='header__social-icon'>
+                            <use xlinkHref={`${icons}#icon-star-full`}/>
+                            </svg>
+                        )
+                    }
+                </div>
+                <p className="product__info-about">
+                    {description}
+                </p>
             </div>
-            <p className="product__info-about">
-                {description}
-            </p>
-            <div className="product__info-sizes">
-                <div className="product__info-sizes-box">xs</div>
-                <div className="product__info-sizes-box">s</div>
-                <div className="product__info-sizes-box selected">m</div>
-                <div className="product__info-sizes-box">l</div>
-                <div className="product__info-sizes-box">xl</div>
-            </div>
+            <form 
+                className="product__info-bottom"
+                onSubmit={handleSubmit}
+            >
+                <div className="product__info-input">
+                    <input 
+                        className="product__info-input-radio" 
+                        type="radio" 
+                        id={`#${id}-xs`} 
+                        value="xs" 
+                        name="size"
+                    />
+                    <label 
+                        htmlFor={`#${id}-xs`} 
+                        className="product__info-input-label"
+                    >
+                        xs
+                    </label>
+                    
+                    <input 
+                        className="product__info-input-radio" 
+                        type="radio" 
+                        id={`#${id}-s`} 
+                        value="s" 
+                        name="size"
+                    />
+                    <label 
+                        htmlFor={`#${id}-s`} 
+                        className="product__info-input-label"
+                    >
+                        s
+                    </label>
+                    
+                    <input 
+                        className="product__info-input-radio" 
+                        type="radio" 
+                        id={`#${id}-m`} 
+                        value="m" 
+                        name="size" 
+                        defaultChecked="true"
+                    />
+                    <label 
+                        htmlFor={`#${id}-m`} 
+                        className="product__info-input-label"
+                    >
+                        m
+                    </label>
+                    
+                    <input 
+                        className="product__info-input-radio" 
+                        type="radio" 
+                        id={`#${id}-l`} 
+                        value="l" 
+                        name="size"
+                    />
+                    <label 
+                        htmlFor={`#${id}-l`} 
+                        className="product__info-input-label"
+                    >
+                        l
+                    </label>
+
+                    <input 
+                        className="product__info-input-radio" 
+                        type="radio" 
+                        id={`#${id}-xl`} 
+                        value="xl" 
+                        name="size"
+                    />
+                    <label 
+                        htmlFor={`#${id}-xl`} 
+                        className="product__info-input-label">
+                        xl
+                    </label>
+                </div>
+
+                <input 
+                    className="product__cta-submit btn" 
+                    type="submit" 
+                    value="aggiungi al carrello"
+                />
+            </form>
         </div>
     </div>
     )
