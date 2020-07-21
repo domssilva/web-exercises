@@ -3,7 +3,13 @@ import React from 'react';
 import SlideMenu from './SlideMenu';
 import icons from '../assets/imgs/icons.svg';
 
-const Navigation = () => {
+const Navigation = (props) => {
+
+  const {
+    cart,
+    setCart
+  } = props;
+
   return (
     <section className="navigation">
       <a href='#menu' className='navigation__anchor'>
@@ -16,8 +22,16 @@ const Navigation = () => {
           <use xlinkHref={`${icons}#icon-cart`}/>
         </svg>
       </a>
-      <SlideMenu version="navigation"/>
-      <SlideMenu version="cart"/>
+      <SlideMenu 
+        cart={cart}
+        setCart={setCart}
+        version="navigation"
+      />
+      <SlideMenu 
+        cart={cart}
+        setCart={setCart}
+        version="cart"
+      />
     </section>
   );
 }

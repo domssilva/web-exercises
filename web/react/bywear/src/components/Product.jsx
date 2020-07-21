@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect } from 'react';
 import icons from '../assets/imgs/icons.svg';
 
 const Product = (props) => {
@@ -24,11 +23,13 @@ const Product = (props) => {
         let productId = selectedRadio.id.split('-')[0].replace('#', '');
         //let productSize = selectedRadio.value;
 
-        cart[productId] == undefined ?
-        cart[productId] = 1 : cart[productId] += 1;
+        cart[productId] === undefined ?
+        cart[productId] = 1 
+        : (
+            cart[productId] += 1
+        );
 
-        console.log("cart: ");
-        console.log(cart);
+        setCart({...cart});
     }
 
     return (
