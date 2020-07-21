@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SlideMenu = ({version, cart}) => {
+const SlideMenu = ({version, cart, setCart}) => {
 
   let tifOptions = Object.keys(cart).map(function(key) {
     return (
-      <p key={key}>
-          <span>qtd:{cart[key]}</span>
-          <span>item: {key}</span>
-      </p>
+      <>
+        <p key={key}>
+            <span>qtd:{cart[key]}</span>
+            <span>item: {key}</span>
+        </p>
+      </>
     )     
   });
 
@@ -25,6 +27,12 @@ const SlideMenu = ({version, cart}) => {
       <a href='#' className='navigation__link navigation__link--close flex-end'>X</a>
       <div className="cart__container">
         {tifOptions}
+          <button 
+            className="cart__container-erase btn"
+            onClick={() => {setCart({})}}
+          >
+            svuota carrello
+          </button>
       </div>
     </nav>
   )
