@@ -3,4 +3,23 @@
         height: 100%;
         color: black;
     }
+
+    &__product {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 10rem;
+
+        &:not(:last-of-type) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__img {
+        $imgsize: 3rem;
+        width: $imgsize;
+        height: $imgsize;
+        margin-right: 1rem;
+    }
 }

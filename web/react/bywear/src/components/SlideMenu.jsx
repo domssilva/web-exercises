@@ -1,16 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SlideMenu = ({version, cart, setCart}) => {
+const SlideMenu = ({version, cart, setCart, merchList}) => {
 
-  let tifOptions = Object.keys(cart).map(function(key) {
+  console.log(merchList);
+
+  
+
+  let cartProduct = Object.keys(cart).map(function(key) {
     return (
-      <>
-        <p key={key}>
-            <span>qtd:{cart[key]}</span>
-            <span>item: {key}</span>
-        </p>
-      </>
+      <div className="cart__product">
+          {
+            merchList.map(obj => 
+              (obj.id === key) ? (
+                <>
+                  <div className="flex">
+                    <img className="cart__img" src={obj.img} alt="cart product"/>
+                    <p>{obj.name}</p>
+                  </div>
+                  <p>€ {obj.price}</p>
+                  <p>qtd: {cart[key]}</p>
+                </>
+              ): '')
+          }
+      </div>
     )     
   });
 
@@ -22,13 +35,13 @@ const SlideMenu = ({version, cart, setCart}) => {
       <Link to='/store' className='navigation__link'>negozio</Link>
       <Link to='/location' className='navigation__link'>trovaci</Link>
     </nav>
-  ) : (
+    ) : (
       <nav className='navigation__nav' id='cart' role='navigation'>
       <a href='#' className='navigation__link navigation__link--close flex-end'>X</a>
       <div className="cart__container">
-        {tifOptions}
+        {cartProduct}
           <button 
-            className="cart__container-erase btn"
+            className="cart__erase btn"
             onClick={() => {setCart({})}}
           >
             svuota carrello

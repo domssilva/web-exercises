@@ -19,7 +19,7 @@ import Navigation from '../components/Navigation';
     return (
         <div className="container">
             <Shop merchList={merch} cart={cart} setCart={setCart}/>
-            <Navigation cart={cart} setCart={setCart}/>
+            <Navigation merchList={merch} cart={cart} setCart={setCart}/>
         </div>
     );
 }

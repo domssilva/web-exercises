@@ -7,7 +7,8 @@ const Navigation = (props) => {
 
   const {
     cart,
-    setCart
+    setCart,
+    merchList
   } = props;
 
   return (
@@ -25,11 +26,13 @@ const Navigation = (props) => {
       <SlideMenu 
         cart={cart}
         setCart={setCart}
+        merchList={merchList}
         version="navigation"
       />
       <SlideMenu 
         cart={cart}
         setCart={setCart}
+        merchList={merchList}
         version="cart"
       />
     </section>
