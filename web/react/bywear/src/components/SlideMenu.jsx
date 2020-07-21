@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function SlideMenu({version}) {
+const SlideMenu = (props) => {
+
+  const {
+    version,
+    cart,
+    setCart
+  } = props;
 
     return (version === 'navigation' ) ?
      (
@@ -14,7 +20,9 @@ export default function SlideMenu({version}) {
     ) : (
         <nav className='navigation__nav' id='cart' role='navigation'>
         <a href='#' className='navigation__link navigation__link--close flex-end'>X</a>
-        <p>cart!!!</p>
+        
       </nav>
     )
 }
+
+export default SlideMenu;

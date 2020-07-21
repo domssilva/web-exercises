@@ -23,6 +23,8 @@ const Shop = (props) => {
                             rating={rating}
                             price={price}
                             description={description}
+                            cart={props.cart}
+                            setCart={props.setCart}
                         />
                     ))
                 }

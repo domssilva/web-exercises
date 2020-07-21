@@ -2,16 +2,33 @@ import React from 'react';
 import { useEffect } from 'react';
 import icons from '../assets/imgs/icons.svg';
 
-export default function Product({name, img, price, rating, id, description}) {
+const Product = (props) => {
+
+    const {
+        name,
+        img,
+        price, 
+        rating, 
+        id, 
+        description,
+        cart,
+        setCart
+    } = props;
+
+    const getRandomNumber = () => Math.floor(Math.random() * 10000);
 
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        let selectedRadio = document.querySelector("input[name='size']:checked");
-        let productId = selectedRadio.id.split('-')[0];
-        let productSize = selectedRadio.value;
+        let selectedRadio = event.target.querySelector("input[name='size']:checked");
+        let productId = selectedRadio.id.split('-')[0].replace('#', '');
+        //let productSize = selectedRadio.value;
 
-        console.log(productId);
+        cart[productId] == undefined ?
+        cart[productId] = 1 : cart[productId] += 1;
+
+        console.log("cart: ");
+        console.log(cart);
     }
 
     return (
@@ -26,7 +43,7 @@ export default function Product({name, img, price, rating, id, description}) {
                 <div className="product__info-rating">
                     {
                         Array(rating).fill('x').map(num => 
-                            <svg key={num} className='header__social-icon'>
+                            <svg key={getRandomNumber()} className='header__social-icon'>
                             <use xlinkHref={`${icons}#icon-star-full`}/>
                             </svg>
                         )
@@ -37,6 +54,7 @@ export default function Product({name, img, price, rating, id, description}) {
                 </p>
             </div>
             <form 
+                id={`form-${id}`}
                 className="product__info-bottom"
                 onSubmit={handleSubmit}
             >
@@ -122,3 +140,5 @@ export default function Product({name, img, price, rating, id, description}) {
     </div>
     )
 }
+
+export default Product;
