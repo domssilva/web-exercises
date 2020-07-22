@@ -2,7 +2,7 @@ const merchList = [
     {
         name: 'T-shirt',
         img: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80',
-        price: '8',
+        price: '8.90',
         id: '123',
         rating: 4,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
@@ -10,7 +10,7 @@ const merchList = [
     {
         name: 'Ponjo',
         img: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-        price: '15',
+        price: '15.45',
         id: '124',
         rating: 3,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
@@ -34,7 +34,7 @@ const merchList = [
     {
         name: 'T-shirt original',
         img: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-        price: '10',
+        price: '11.80',
         id: '127',
         rating: 2,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',

@@ -8,7 +8,9 @@ const Navigation = (props) => {
   const {
     cart,
     setCart,
-    merchList
+    merchList,
+    total,
+    setTotal
   } = props;
 
   return (
@@ -24,12 +26,16 @@ const Navigation = (props) => {
         </svg>
       </a>
       <SlideMenu 
+        total={total}
+        setTotal={setTotal}
         cart={cart}
         setCart={setCart}
         merchList={merchList}
         version="navigation"
       />
       <SlideMenu 
+        total={total}
+        setTotal={setTotal}
         cart={cart}
         setCart={setCart}
         merchList={merchList}

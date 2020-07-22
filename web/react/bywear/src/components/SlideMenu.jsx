@@ -3,13 +3,19 @@ import { Link } from 'react-router-dom';
 
 import CartProduct from './CartProduct';
 
-const SlideMenu = ({version, cart, setCart, merchList}) => {
+
+const SlideMenu = ({version, total, setTotal, cart, setCart, merchList}) => {
 
   let cartProduct = '';
-  let total = 0;
+
+  const emptyCart = () => {
+    setTotal(0);
+    setCart({});
+  }
 
   try {
     cartProduct = Object.keys(cart).map(function(key) {
+
       return (
         <CartProduct 
           key={`${key}`}
@@ -39,13 +45,19 @@ const SlideMenu = ({version, cart, setCart, merchList}) => {
           {cartProduct}
         </div>
         <div className="cart__action">
-          <button 
-            className="cart__action-erase btn"
-            onClick={() => {setCart({})}}
-          >
-            svuota carrello
-          </button>
-          <span className="cart__action-total">€ {total}</span>
+          {
+            (total > 0) ? (
+              <>
+                <button 
+                  className="cart__action-erase btn"
+                  onClick={() => {emptyCart()}}
+                >
+                  svuota carrello
+                </button>
+                <span className="cart__action-total">€ {parseFloat(total).toFixed(2)}</span>
+              </>
+            ) : 'carrello vuoto'
+          }
         </div>
       </div>
     </nav>

@@ -27,14 +27,21 @@
     }
   }
 
+  &__anchor,
+  &__cart {
+    position: fixed;
+
+    @include adapt(tablet){
+      position: unset;
+    }
+  }
+
   $anchortop: 2rem;
   &__anchor {
-    position: fixed;
     top: $anchortop;
   }
 
   &__cart {
-    position: fixed;
     top: $anchortop + 5rem;
   }
   
@@ -115,6 +122,9 @@
     }
 
     &--close {
+
+      position: absolute;
+      top: 1.2rem;
 
       &:hover {
         color: $primary-2;

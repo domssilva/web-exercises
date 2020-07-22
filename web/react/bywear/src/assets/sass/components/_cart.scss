@@ -23,17 +23,14 @@
         font-size: 2rem;
         display: flex;
         height: 5rem;
-        padding: 1rem;
+        padding: 0;
         border-radius: $border-radius;
         width: 100%;
         transition: all .45s ease;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
-
-        &:not(:last-of-type) {
-            margin-bottom: 3rem;
-        }
+        align-items: flex-start;
+        position: relative;
 
         &-name {
             margin-right: 2rem;
@@ -65,14 +62,14 @@
 
         &-main,
         &:hover &-price {
+            cursor: default;
             opacity: 1;
             visibility: visible;
         }
 
-        &:hover &-main,
         &-price {
             opacity: 0;
-            position: absolute;
+            position: relative;
             visibility: hidden;
         }
 

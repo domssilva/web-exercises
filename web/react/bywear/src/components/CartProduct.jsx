@@ -1,12 +1,15 @@
 import React from 'react'
 
 export default function CartProduct({productId, cart, merchList}) {
+
+    const getRandomNumber = () => Math.floor(Math.random() * 10000);
+
     return (
         <>
             {
               merchList.map(obj => 
                 (obj.id === productId) ? (
-                <div key={`${productId}-${cart[productId]}`} className="cart__product">
+                <div key={`${productId}-${cart[productId]}-${getRandomNumber()}`} className="cart__product">
                     <div className="cart__product-main flex">
                       <img className="cart__product-img" src={obj.img} alt="cart product"/>
                       <p className="cart__product-name">{obj.name} </p>

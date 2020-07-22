@@ -10,16 +10,30 @@ import Navigation from '../components/Navigation';
  const Location = () => {
 
     const [cart, setCart] = useState({});
+    const [total, setTotal] = useState(0);
     const [merch, setMerchList] = useState(merchList);
 
     useEffect(() => {
-        //console.log(cart);
+        let prodQtd, prodPrice;
+        let newTotal = total;
+        Object.keys(cart).map(id => {
+            merch.forEach(prod => {
+                if (prod.id === id) {
+                    prodPrice = prod.price;
+                    prodQtd = cart[id];
+                    newTotal += prodPrice * prodQtd;
+                }
+            });
+        });
+
+        setTotal(newTotal);
+
     }, [cart]);
 
     return (
         <div className="container">
             <Shop merchList={merch} cart={cart} setCart={setCart}/>
-            <Navigation merchList={merch} cart={cart} setCart={setCart}/>
+            <Navigation total={total} setTotal={setTotal} merchList={merch} cart={cart} setCart={setCart}/>
         </div>
     );
 }
