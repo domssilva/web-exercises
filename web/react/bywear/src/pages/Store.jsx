@@ -7,16 +7,37 @@ import merchList from '../components/Product.data';
 import Shop from '../components/Shop';
 import Navigation from '../components/Navigation';
 
- const Location = () => {
+ const Store = () => {
 
     const [cart, setCart] = useState({});
     const [total, setTotal] = useState(0);
     const [merch, setMerchList] = useState(merchList);
 
-    useEffect(() => {
+    const removeProduct = (id) => {
+        let newCart = cart;
+
+        for (const [productId, value] of Object.entries(cart)) {
+            if (productId === id) {
+                delete newCart[productId];
+            }
+          }
+        
+        setCart(newCart);
+        calculateTotalCartPrice();
+
+        if (Object.keys(cart).length === 0) {
+            setCart({});
+            setTotal(0);
+        }
+    }
+
+    const calculateTotalCartPrice = () => {
         let prodQtd, prodPrice;
-        let newTotal = total;
+        let newTotal = 0;
+
+        console.log(cart);
         Object.keys(cart).map(id => {
+            console.log(id);
             merch.forEach(prod => {
                 if (prod.id === id) {
                     prodPrice = prod.price;
@@ -25,17 +46,27 @@ import Navigation from '../components/Navigation';
                 }
             });
         });
-
+    
         setTotal(newTotal);
+    }
 
+    useEffect(() => {
+        calculateTotalCartPrice();
     }, [cart]);
 
     return (
         <div className="container">
             <Shop merchList={merch} cart={cart} setCart={setCart}/>
-            <Navigation total={total} setTotal={setTotal} merchList={merch} cart={cart} setCart={setCart}/>
+            <Navigation 
+                total={total} 
+                setTotal={setTotal} 
+                merchList={merch} 
+                cart={cart} 
+                setCart={setCart}
+                removeProduct={removeProduct}
+            />
         </div>
     );
 }
 
-export default Location;
+export default Store;

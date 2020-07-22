@@ -10,7 +10,8 @@ const Navigation = (props) => {
     setCart,
     merchList,
     total,
-    setTotal
+    setTotal,
+    removeProduct
   } = props;
 
   return (
@@ -31,6 +32,7 @@ const Navigation = (props) => {
         cart={cart}
         setCart={setCart}
         merchList={merchList}
+        removeProduct={removeProduct}
         version="navigation"
       />
       <SlideMenu 
@@ -39,6 +41,7 @@ const Navigation = (props) => {
         cart={cart}
         setCart={setCart}
         merchList={merchList}
+        removeProduct={removeProduct}
         version="cart"
       />
     </section>

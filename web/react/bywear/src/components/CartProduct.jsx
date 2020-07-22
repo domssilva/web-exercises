@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CartProduct({productId, cart, merchList}) {
+export default function CartProduct({productId, cart, setCart, removeProduct, merchList}) {
 
     const getRandomNumber = () => Math.floor(Math.random() * 10000);
 
@@ -11,8 +11,14 @@ export default function CartProduct({productId, cart, merchList}) {
                 (obj.id === productId) ? (
                 <div key={`${productId}-${cart[productId]}-${getRandomNumber()}`} className="cart__product">
                     <div className="cart__product-main flex">
+                    <button 
+                        className="x-red"
+                        onClick={() => {removeProduct(productId)}}
+                    >
+                        X
+                    </button>
                       <img className="cart__product-img" src={obj.img} alt="cart product"/>
-                      <p className="cart__product-name">{obj.name} </p>
+                      <p className="cart__product-name"> {obj.name} </p>
                         <p className="cart__product-qtd">
                             x
                             <span className="cart__product-qtd-size">

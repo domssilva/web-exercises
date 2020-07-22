@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 import CartProduct from './CartProduct';
 
-
-const SlideMenu = ({version, total, setTotal, cart, setCart, merchList}) => {
+const SlideMenu = ({version, total, setTotal, cart, setCart, removeProduct, merchList}) => {
 
   let cartProduct = '';
 
@@ -21,7 +20,9 @@ const SlideMenu = ({version, total, setTotal, cart, setCart, merchList}) => {
           key={`${key}`}
           productId={key} 
           cart={cart} 
+          setCart={setCart}
           merchList={merchList}
+          removeProduct={removeProduct}
         />
       )
     });
