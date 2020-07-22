@@ -27,6 +27,17 @@
     }
   }
 
+  $anchortop: 2rem;
+  &__anchor {
+    position: fixed;
+    top: $anchortop;
+  }
+
+  &__cart {
+    position: fixed;
+    top: $anchortop + 5rem;
+  }
+  
   &__anchor:hover &__icon {
     fill: $white;
   }
@@ -43,6 +54,8 @@
     flex-direction: column;
     background: inherit;
     color: black;
+
+    overflow-y: auto;
 
     box-shadow: $shadow;
 
@@ -67,7 +80,7 @@
     
     z-index: 1000;
     padding: 2rem 3rem;
-    position: absolute;
+    position: fixed;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -101,8 +114,11 @@
       }
     }
 
-    &--close:hover {
-      color: $primary-2;
+    &--close {
+
+      &:hover {
+        color: $primary-2;
+      }
     }
   }
 

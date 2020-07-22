@@ -1,29 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import CartProduct from './CartProduct';
+
 const SlideMenu = ({version, cart, setCart, merchList}) => {
 
   let cartProduct = '';
+  let total = 0;
 
   try {
     cartProduct = Object.keys(cart).map(function(key) {
       return (
-        <div className="cart__product">
-            {
-              merchList.map(obj => 
-                (obj.id === key) ? (
-                  <>
-                    <div className="flex">
-                      <img className="cart__img" src={obj.img} alt="cart product"/>
-                      <p>{obj.name}</p>
-                    </div>
-                    <p>€ {obj.price}</p>
-                    <p>qtd: {cart[key]}</p>
-                  </>
-                ): '')
-            }
-        </div>
-      )     
+        <CartProduct 
+          key={`${key}`}
+          productId={key} 
+          cart={cart} 
+          merchList={merchList}
+        />
+      )
     });
   } catch(error) {
     console.log(error);
@@ -41,13 +35,18 @@ const SlideMenu = ({version, cart, setCart, merchList}) => {
       <nav className='navigation__nav' id='cart' role='navigation'>
       <a href='#' className='navigation__link navigation__link--close flex-end'>X</a>
       <div className="cart__container">
-        {cartProduct}
+        <div className="cart__product-container">
+          {cartProduct}
+        </div>
+        <div className="cart__action">
           <button 
-            className="cart__erase btn"
+            className="cart__action-erase btn"
             onClick={() => {setCart({})}}
           >
             svuota carrello
           </button>
+          <span className="cart__action-total">€ {total}</span>
+        </div>
       </div>
     </nav>
   )
