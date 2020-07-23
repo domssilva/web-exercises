@@ -13,9 +13,7 @@ ___
 
 Case study to practice my react knowledge.
 
-
-
-With this project I focused on taking advantage of the browser API to make my cart somehow persistent for the user; giving the possibility of navigating through the different application's routes while keeping track of the products inside the cart.
+With this project I focused on taking advantage of the browser API to make the cart data persistent.
 
 Stack:
 * html
@@ -23,9 +21,10 @@ Stack:
 * css/sass
 * React
 
-Libraries:
+Libraries/APIs:
 * react-router-dom
 * leaflet (map)
+* Browser API
 
 Created from scratch:
 * cart system
