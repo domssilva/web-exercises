@@ -10,7 +10,7 @@ const Shop = (props) => {
             <HeaderNav/>
             <div className="content-store__cell">
                 {
-                    props.merchList.map(({name, img, price, rating, id, description}) => (
+                    props.merch.map(({name, img, price, rating, id, description}) => (
                         <Product 
                             key={id}
                             name={name} 

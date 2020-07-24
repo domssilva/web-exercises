@@ -6,8 +6,6 @@ import Location from './pages/Location';
 import Store from './pages/Store';
 import Error from './pages/Error';
 
-import Navigation from './components/Navigation';
-
 // this data will be fetched from contentful
 import merchList from './components/Product.data';
 // this data will be fetched from contentful
@@ -60,13 +58,10 @@ function App() {
   }, [cart]);
 
   return (
-    <>
     <Switch>
-      <Route exact path='/' component={Home}/>
-      <Route exact path='/location' component={Location}/>
-      <Route exact path='/store' render={
-        () => (
-          <Store
+
+      <Route exact path="/">
+        <Home
             cart={cart}
             setCart={setCart}
             total={total}
@@ -74,11 +69,31 @@ function App() {
             merch={merch}
             removeProduct={removeProduct}
           />
-        )
-      }/>
+      </Route>
+      <Route exact path='/location'>
+        <Location
+          cart={cart}
+          setCart={setCart}
+          total={total}
+          setTotal={setTotal}
+          merch={merch}
+          removeProduct={removeProduct}
+        />
+      </Route>
+      <Route exact path='/store'>
+        <Store
+            cart={cart}
+            setCart={setCart}
+            total={total}
+            setTotal={setTotal}
+            merch={merch}
+            removeProduct={removeProduct}
+          />
+      </Route>
       <Route path='/' component={Error}/>
+
     </Switch>
-    </>
+
   );
 }
 

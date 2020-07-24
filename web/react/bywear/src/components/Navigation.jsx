@@ -9,10 +9,9 @@ const Navigation = (props) => {
   const {
     cart,
     setCart,
-    merchList,
+    merch,
     total,
     setTotal,
-    removeProduct
   } = props;
 
   const emptyCart = () => {
@@ -34,7 +33,9 @@ const Navigation = (props) => {
       </a>
       <SideNav props={props}/>
       <Cart
+        cart={cart}
         total={total}
+        merch={merch}
         emptyCart={emptyCart}
       />
     </section>

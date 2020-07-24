@@ -16,12 +16,12 @@ import Navigation from '../components/Navigation';
 
     return (
         <div className="container">
-            <Shop merchList={merch} cart={cart} setCart={setCart}/>
+            <Shop merch={merch} cart={cart} setCart={setCart}/>
             <Navigation 
                 cart={cart} 
                 total={total} 
                 setTotal={setTotal} 
-                merchList={merch} 
+                merch={merch} 
                 setCart={setCart}
                 removeProduct={removeProduct}
             />

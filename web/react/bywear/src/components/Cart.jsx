@@ -5,9 +5,19 @@ import CartProduct from './CartProduct';
 const Cart = (props) => {
 
     const {
+        cart,
         total,
+        merch,
         emptyCart
     } = props;
+
+    for (let numericId in cart) {
+        merch.forEach(product => {
+            if (product.id === numericId) {
+                console.log(product);
+            }
+        });
+    }
 
     return (
         <nav className='navigation__nav' id='cart' role='navigation'>
