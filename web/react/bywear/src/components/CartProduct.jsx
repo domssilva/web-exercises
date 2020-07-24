@@ -3,20 +3,16 @@ import React from 'react'
 const CartProduct = (props) => {
 
     const {
-        cart,
-        productId,
-        removeProduct,
         productObj,
+        removeProduct,
     } = props;
 
-    const getRandomNumber = () => Math.floor(Math.random() * 10000);
-
     return (
-        <div key={`${getRandomNumber()}`} className="cart__product">
+        <div className="cart__product">
             <div className="cart__product-main flex">
             <button 
                 className="x-red"
-                onClick={() => {removeProduct(productId)}}
+                onClick={() => {removeProduct(productObj.id)}}
             >
                 X
             </button>
@@ -25,7 +21,7 @@ const CartProduct = (props) => {
                 <p className="cart__product-qtd">
                     x
                     <span className="cart__product-qtd-size">
-                        cart[productId]
+                        {productObj.qtd}
                     </span>
                 </p>
             </div>

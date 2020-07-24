@@ -12,6 +12,7 @@ const Navigation = (props) => {
     merch,
     total,
     setTotal,
+    removeProduct,
   } = props;
 
   const emptyCart = () => {
@@ -37,6 +38,7 @@ const Navigation = (props) => {
         total={total}
         merch={merch}
         emptyCart={emptyCart}
+        removeProduct={removeProduct}
       />
     </section>
   );

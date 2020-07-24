@@ -8,13 +8,17 @@ const Cart = (props) => {
         cart,
         total,
         merch,
-        emptyCart
+        emptyCart,
+        removeProduct,
     } = props;
 
+    const getRandomNumber = () => Math.floor(Math.random() * 10000);
+
+    let cartItems = [];
     for (let numericId in cart) {
         merch.forEach(product => {
             if (product.id === numericId) {
-                console.log(product);
+                cartItems.push(product);
             }
         });
     }
@@ -24,17 +28,16 @@ const Cart = (props) => {
             <a href='#' className='navigation__link navigation__link--close flex-end'>X</a>
             <div className="cart__container">
                 <div className="cart__product-container">
-                    <CartProduct 
-                        props={props} 
-                        productId={125}
-                        productObj={
-                            {
-                                img: '',
-                                name: 'name',
-                                price: 23
-                            }
-                        }
-                    />
+                    {
+                        cartItems.map(productObj => (
+                            <CartProduct 
+                                key={`${productObj.id}-${getRandomNumber()}`}
+                                props={props} 
+                                productObj={productObj}
+                                removeProduct={removeProduct}
+                            />
+                        ))
+                    }
                 </div>
                 <div className="cart__action">
                     {
