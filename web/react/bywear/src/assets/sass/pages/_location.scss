@@ -1,0 +1,41 @@
+.location {
+    padding-left: 3rem;
+    height: 35rem;
+    color: $white;
+
+    &__address {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        max-width: 30rem;
+
+        &:not(:last-of-type) {
+            margin-bottom: 2rem;
+        }
+        
+        &--highlight {
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            font-weight: 300;
+            color: $blue-light;
+        }
+    }
+
+    @include adapt(tablet) {
+        width: 60%;
+
+        * {
+            margin-right: 0;
+            max-width: unset;
+        }
+    }
+
+    @include adapt(phone) {
+        width: 100%;
+        padding-left: unset;
+    }
+}
