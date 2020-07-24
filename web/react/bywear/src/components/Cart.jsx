@@ -1,9 +1,10 @@
 import React from 'react';
 
+import CartProduct from './CartProduct';
+
 const Cart = (props) => {
 
     const {
-        cartProduct,
         total,
         emptyCart
     } = props;
@@ -13,7 +14,17 @@ const Cart = (props) => {
             <a href='#' className='navigation__link navigation__link--close flex-end'>X</a>
             <div className="cart__container">
                 <div className="cart__product-container">
-                    {cartProduct}
+                    <CartProduct 
+                        props={props} 
+                        productId={125}
+                        productObj={
+                            {
+                                img: '',
+                                name: 'name',
+                                price: 23
+                            }
+                        }
+                    />
                 </div>
                 <div className="cart__action">
                     {

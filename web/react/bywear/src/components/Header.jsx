@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import HeaderNav from './HeaderNav';
 import icons from '../assets/imgs/icons.svg';
@@ -39,6 +40,8 @@ const Header = () => {
         </p>
       </section>
     </div>
+
+    <Link className="btn btn--white" to="/store">Negozio</Link>
   </section>
   </>
   );

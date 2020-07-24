@@ -4,7 +4,17 @@ import Cart from './Cart';
 import SideNav from './SideNav';
 import CartProduct from './CartProduct';
 
-const SlideMenu = ({version, total, setTotal, cart, setCart, removeProduct, merchList}) => {
+const SlideMenu = (props) => {
+
+  const {
+    version,
+    total,
+    setTotal,
+    cart,
+    setCart,
+    removeProduct,
+    merchList
+  } = props;
 
   let cartProduct = '';
 
@@ -27,6 +37,7 @@ const SlideMenu = ({version, total, setTotal, cart, setCart, removeProduct, merc
         />
       )
     });
+    
   } catch(error) {
     console.log(error);
   }
@@ -40,4 +51,5 @@ const SlideMenu = ({version, total, setTotal, cart, setCart, removeProduct, merc
       />
     )
 }
+
 export default SlideMenu;

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import SlideMenu from './SlideMenu';
+import SideNav from './SideNav';
+import Cart from './Cart';
 import icons from '../assets/imgs/icons.svg';
 
 const Navigation = (props) => {
@@ -14,6 +15,11 @@ const Navigation = (props) => {
     removeProduct
   } = props;
 
+  const emptyCart = () => {
+    setTotal(0);
+    setCart({});
+  }
+
   return (
     <section className="navigation">
       <a href='#menu' className='navigation__anchor'>
@@ -26,23 +32,10 @@ const Navigation = (props) => {
           <use xlinkHref={`${icons}#icon-cart`}/>
         </svg>
       </a>
-      <SlideMenu 
+      <SideNav props={props}/>
+      <Cart
         total={total}
-        setTotal={setTotal}
-        cart={cart}
-        setCart={setCart}
-        merchList={merchList}
-        removeProduct={removeProduct}
-        version="navigation"
-      />
-      <SlideMenu 
-        total={total}
-        setTotal={setTotal}
-        cart={cart}
-        setCart={setCart}
-        merchList={merchList}
-        removeProduct={removeProduct}
-        version="cart"
+        emptyCart={emptyCart}
       />
     </section>
   );
