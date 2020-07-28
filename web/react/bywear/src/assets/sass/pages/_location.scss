@@ -23,6 +23,10 @@
             font-weight: 300;
             color: $blue-light;
         }
+
+        @include adapt(phone) {
+            font-size: 1.3rem;
+        }
     }
 
     @include adapt(tablet) {
@@ -36,6 +40,6 @@
 
     @include adapt(phone) {
         width: 100%;
-        padding-left: unset;
+        padding: 0 1rem;
     }
 }

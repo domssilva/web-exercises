@@ -117,5 +117,25 @@
         &-total {
             text-align: center;
         }
+
+        &-btns {
+            width: 30rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+
+            a,
+            .btn,
+            button {
+                margin: 0;
+                width: 14rem;
+                height: 5rem;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     }
 }

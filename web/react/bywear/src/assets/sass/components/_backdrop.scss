@@ -5,14 +5,14 @@
     height: 100%;
     background: rgba($black, .2);
     position: absolute;
-    cursor: default;
     z-index: 10;
-
+    cursor: default;
 
     @include hide;
 
-    @include adapt(phone) {
+    @include adapt(tablet) {
         right: 0;
-        //top: $navigation-height;
+        top: $navigation-height;
+        height: 100vh;
     }
 }

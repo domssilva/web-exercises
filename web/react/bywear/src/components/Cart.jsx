@@ -51,15 +51,17 @@ const Cart = (props) => {
                         {
                         (total > 0) ? (
                             <>
-                            <Link className="btn" to="/checkout">
-                                Acquista
-                            </Link>
-                            <button 
-                                className="cart__action-erase btn"
-                                onClick={() => {emptyCart()}}
-                            >
-                                svuota carrello
-                            </button>
+                            <div className="cart__action-btns">
+                                <Link className="btn" to="/checkout">
+                                    Acquista
+                                </Link>
+                                <button 
+                                    className="cart__action-erase btn"
+                                    onClick={() => {emptyCart()}}
+                                >
+                                    svuota carrello
+                                </button>
+                            </div>
                             <span className="cart__action-total">€ {parseFloat(total).toFixed(2)}</span>
                             </>
                         ) : 'carrello vuoto'

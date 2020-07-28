@@ -18,6 +18,10 @@
   &__logo {
     font-size: 2rem;
     color: $white;
+
+    @include adapt(tablet) {
+      margin-left: 1rem;
+    }
   }
 
   &__search {
@@ -128,6 +132,10 @@
     line-height: 1.4;
     letter-spacing: .22rem;
     font-weight: 400;
+
+    @include adapt(phone) {
+      margin: 1rem 1rem 0 1rem;
+    }
   }
 
   &__btn {
@@ -166,9 +174,13 @@
     @include adapt(tablet) {
       position: unset;
       text-align: center;
-      margin: 15rem auto;
+      margin: 8rem auto;
       left: unset;
       transform: unset;
+    }
+
+    @include adapt(phone) {
+      margin: 6rem auto;
     }
   }
 

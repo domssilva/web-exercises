@@ -5,7 +5,7 @@ export function getRandomNumber() {
 export function animateGallery() {
     let photos = document.getElementById('gallery').children;
   
-    let time = 1000;
+    let time = 4000;
     let idx = 0;
     let maxIdx = photos.length;
   

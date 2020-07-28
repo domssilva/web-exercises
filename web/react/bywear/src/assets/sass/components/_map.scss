@@ -11,6 +11,8 @@
 
         @include adapt(phone) {
             width: 100%;
+            height: auto;
+            text-align: center;
         }
     }
 
@@ -27,4 +29,9 @@
 
     object-position: center;
     object-fit: cover;
+
+    @include adapt(phone) {
+        width: 90%;
+        height: 20rem;
+    }
 }

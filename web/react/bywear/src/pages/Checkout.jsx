@@ -22,13 +22,14 @@ const Checkout = (props) => {
     return (
         <div className="container">
             <section className='content checkout'>
-                <header className="checkout__header">
-                    <p>totale: {parseFloat(total).toFixed(2)}</p>
-                </header>
                 <form 
                     className="checkout__form"
                     onSubmit={verifyData}
+
                 >
+                    <p className="checkout__total">totale: {parseFloat(total).toFixed(2)}</p>
+                    <img className="checkout__payment-img" src="https://cdn.shopify.com/s/files/1/0994/4836/files/creditcardicons.png?6051909690617246086" alt="metodi di pagamento"/>
+
                     <label htmlFor="name">Nome</label>
                     <input type="text" id="name"/>
                     
@@ -40,8 +41,6 @@ const Checkout = (props) => {
 
                     <label htmlFor="mobile">Telefono</label>
                     <input type="text" id="mobile"/>
-
-                    <img className="checkout__payment-img" src="https://cdn.shopify.com/s/files/1/0994/4836/files/creditcardicons.png?6051909690617246086" alt="metodi di pagamento"/>
 
                     <fieldset>
                         <input type="submit" className="btn" value="compra"/>
