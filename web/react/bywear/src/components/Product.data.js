@@ -6,6 +6,7 @@ const merchList = [
         id: '123',
         rating: 4,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'tshirt',
     },
     {
         name: 'Ponjo',
@@ -14,14 +15,16 @@ const merchList = [
         id: '124',
         rating: 3,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'accessory',
     },
     {
-        name: 'Coat',
+        name: 'Cappotto lungo femminile',
         img: 'https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
         price: '69.99',
         id: '125',
         rating: 5,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'winter',
     },
     {
         name: 'T-shirt nera',
@@ -30,6 +33,7 @@ const merchList = [
         id: '126',
         rating: 2,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'tshirt',
     },
     {
         name: 'T-shirt original',
@@ -38,6 +42,7 @@ const merchList = [
         id: '127',
         rating: 1,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'tshirt',
     },
     {
         name: 'Shorts',
@@ -46,6 +51,7 @@ const merchList = [
         id: '128',
         rating: 3,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'short',
     },
     {
         name: 'Scarpe nike air',
@@ -54,6 +60,7 @@ const merchList = [
         id: '129',
         rating: 5,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'shoes',
     },
     {
         name: 'Borsa',
@@ -62,6 +69,43 @@ const merchList = [
         id: '130',
         rating: 4,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'accessory',
+    },
+    {
+        name: 'occhiali',
+        img: 'https://images.unsplash.com/photo-1586051384951-bb5e7d1a5e57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        price: '24.50',
+        id: '131',
+        rating: 3,
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'accessory',
+    },
+    {
+        name: 'Cappotto corto maschile',
+        img: 'https://images.unsplash.com/photo-1575862980084-cd0645edddba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+        price: '79.90',
+        id: '132',
+        rating: 5,
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'winter',
+    },
+    {
+        name: 'Cappello di spiaggia',
+        img: 'https://images.unsplash.com/photo-1591178516464-be524c9b1666?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        price: '3.99',
+        id: '133',
+        rating: 2,
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'accessory',
+    },
+    {
+        name: 'Cappotto lungo ',
+        img: 'https://images.unsplash.com/photo-1580314030455-1d182ab1f4f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80',
+        price: '79.90',
+        id: '134',
+        rating: 5,
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, maiores.',
+        category: 'winter',
     },
 ];
 
