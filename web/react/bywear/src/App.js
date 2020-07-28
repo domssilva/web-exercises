@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, withRouter} from 'react-router-dom';
 
 import Home from './pages/Home';
 import Location from './pages/Location';
 import Store from './pages/Store';
+import Checkout from './pages/Checkout';
 import Error from './pages/Error';
 
 // this data will be fetched from contentful
@@ -68,7 +69,6 @@ function App() {
 
   return (
     <Switch>
-
       <Route exact path="/">
         <Home
             cart={cart}
@@ -102,6 +102,17 @@ function App() {
             removeProduct={removeProduct}
           />
       </Route>
+      <Route exact path='/checkout'>
+        <Checkout
+            cart={cart}
+            setCart={setCart}
+            total={total}
+            setTotal={setTotal}
+            merch={merch}
+            editProductQtd={editProductQtd}
+            removeProduct={removeProduct}
+          />
+      </Route>
       <Route path='/' component={Error}/>
 
     </Switch>
@@ -109,4 +120,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);

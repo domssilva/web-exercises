@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import CartProduct from './CartProduct';
 import Backdrop from './Backdrop';
@@ -50,6 +51,9 @@ const Cart = (props) => {
                         {
                         (total > 0) ? (
                             <>
+                            <Link className="btn" to="/checkout">
+                                Acquista
+                            </Link>
                             <button 
                                 className="cart__action-erase btn"
                                 onClick={() => {emptyCart()}}

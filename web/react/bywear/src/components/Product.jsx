@@ -1,6 +1,8 @@
 import React from 'react';
 import icons from '../assets/imgs/icons.svg';
 
+import * as fx from './Functions';
+
 const Product = (props) => {
 
     const {
@@ -13,8 +15,6 @@ const Product = (props) => {
         cart,
         setCart
     } = props;
-
-    const getRandomNumber = () => Math.floor(Math.random() * 10000);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -44,7 +44,7 @@ const Product = (props) => {
                 <div className="product__info-rating" title="media delle ricensioni">
                     {
                         Array(rating).fill('x').map(num => 
-                            <svg key={getRandomNumber()} className='header__social-icon'>
+                            <svg key={fx.getRandomNumber()} className='header__social-icon'>
                             <use xlinkHref={`${icons}#icon-star-full`}/>
                             </svg>
                         )

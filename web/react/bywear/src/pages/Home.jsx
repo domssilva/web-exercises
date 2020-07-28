@@ -5,7 +5,6 @@ import Gallery from '../components/Gallery';
 import Navigation from '../components/Navigation';
 
 const Home = (props) => {
-
     const {
         merch,
         cart,
@@ -14,7 +13,7 @@ const Home = (props) => {
         setTotal,
         editProductQtd,
         removeProduct,
-    } = props;
+    } = props; 
 
     return (
         <div className="container">
