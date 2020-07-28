@@ -1,0 +1,19 @@
+@keyframes slideFromRight {
+    from {
+      width: 20rem;
+    }
+  
+    to {
+      width: 30rem;
+    }
+  }
+  
+  @keyframes slideFromTop {
+    from {
+      transform: translateY(-300px);
+    }
+  
+    to {
+      transform: translateY(0px);
+    }
+  }

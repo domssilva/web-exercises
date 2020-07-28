@@ -38,7 +38,6 @@ function App() {
       let prodQtd, prodPrice;
       let newTotal = 0;
 
-      console.log(cart);
       Object.keys(cart).map(id => {
           console.log(id);
           merch.forEach(prod => {

@@ -3,9 +3,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
   padding: 3rem 0;
+
   position: relative;
+  z-index: 100;
 
   @include adapt(tablet) {
     width: 100%;
@@ -82,6 +83,11 @@
   }
   
   &__nav:target {
+
+    // display #backdrop
+    & ~ #backdrop {
+      @include unhide;
+    }
     
     @include unhide;
     
@@ -132,24 +138,4 @@
     }
   }
 
-}
-
-@keyframes slideFromRight {
-  from {
-    width: 20rem;
-  }
-
-  to {
-    width: 30rem;
-  }
-}
-
-@keyframes slideFromTop {
-  from {
-    transform: translateY(-300px);
-  }
-
-  to {
-    transform: translateY(0px);
-  }
 }

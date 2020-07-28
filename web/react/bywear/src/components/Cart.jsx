@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CartProduct from './CartProduct';
+import Backdrop from './Backdrop';
 
 const Cart = (props) => {
 
@@ -24,38 +25,41 @@ const Cart = (props) => {
     }
 
     return (
-        <nav className='navigation__nav' id='cart' role='navigation'>
-            <a href='#' className='navigation__link navigation__link--close flex-end'>X</a>
-            <div className="cart__container">
-                <div className="cart__product-container">
-                    {
-                        cartItems.map(productObj => (
-                            <CartProduct 
-                                key={`${productObj.id}-${getRandomNumber()}`}
-                                props={props} 
-                                productObj={productObj}
-                                removeProduct={removeProduct}
-                            />
-                        ))
-                    }
+        <>
+            <nav className='navigation__nav cart__nav' id='cart' role='navigation'>
+                <a href='#' className='navigation__link navigation__link--close flex-end'>X</a>
+                <div className="cart__container">
+                    <div className="cart__product-container">
+                        {
+                            cartItems.map(productObj => (
+                                <CartProduct 
+                                    key={`${productObj.id}-${getRandomNumber()}`}
+                                    props={props} 
+                                    productObj={productObj}
+                                    removeProduct={removeProduct}
+                                />
+                            ))
+                        }
+                    </div>
+                    <div className="cart__action">
+                        {
+                        (total > 0) ? (
+                            <>
+                            <button 
+                                className="cart__action-erase btn"
+                                onClick={() => {emptyCart()}}
+                            >
+                                svuota carrello
+                            </button>
+                            <span className="cart__action-total">€ {parseFloat(total).toFixed(2)}</span>
+                            </>
+                        ) : 'carrello vuoto'
+                        }
+                    </div>
                 </div>
-                <div className="cart__action">
-                    {
-                    (total > 0) ? (
-                        <>
-                        <button 
-                            className="cart__action-erase btn"
-                            onClick={() => {emptyCart()}}
-                        >
-                            svuota carrello
-                        </button>
-                        <span className="cart__action-total">€ {parseFloat(total).toFixed(2)}</span>
-                        </>
-                    ) : 'carrello vuoto'
-                    }
-                </div>
-            </div>
-        </nav>
+            </nav>
+            <Backdrop/>
+        </>
     );
 }
 

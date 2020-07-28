@@ -1,5 +1,6 @@
 
 @import 'abstracts/variables';
+@import 'abstracts/animations';
 @import 'abstracts/mixins';
 @import 'abstracts/placeholders';
 
@@ -23,6 +24,7 @@
 @import 'components/map';
 @import 'components/store';
 @import 'components/product';
+@import 'components/backdrop';
 
 @import 'pages/home';
 @import 'pages/contact';

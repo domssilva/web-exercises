@@ -1,5 +1,11 @@
 .cart {
 
+    &__nav:target {
+        & ~ #backdrop {
+        @include unhide;
+        }
+    }
+
     &__container {
         top: 6rem;
         left: 0;
@@ -95,5 +101,4 @@
             text-align: center;
         }
     }
-
 }

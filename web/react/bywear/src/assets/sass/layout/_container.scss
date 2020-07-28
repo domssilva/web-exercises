@@ -80,7 +80,7 @@
 .navigation {
   grid-area: nav;
   background: $blue-light;
-  flex: 0 0 6%;
+  flex: 0 0 $navigation-width;
 
   border-top-right-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
