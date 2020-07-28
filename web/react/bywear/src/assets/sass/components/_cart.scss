@@ -31,27 +31,43 @@
 
     &__product {
         font-size: 2rem;
-        display: flex;
-        height: 5rem;
-        padding: 0;
+        min-height: 5rem;
+        padding: .5rem 1rem;
         border-radius: $border-radius;
         width: 100%;
         transition: all .45s ease;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
         position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &:not(:last-of-type) {
+            margin-bottom: 1rem;
+        }
 
         &-name {
+            width: 8rem;
             margin-right: 2rem;
         }
 
         &-qtd {
 
-            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            width: 10rem;
 
+            & .btn {
+                width: .3rem;
+                height: .3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+            
             &-size {
-                font-size: 2.4rem;
+                font-size: 2rem;
                 font-weight: 600;
                 margin-left: .5rem;
             }
@@ -79,6 +95,7 @@
 
         &-price {
             opacity: 0;
+            align-self: center;
             position: relative;
             visibility: hidden;
         }

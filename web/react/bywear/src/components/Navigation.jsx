@@ -12,6 +12,7 @@ const Navigation = (props) => {
     merch,
     total,
     setTotal,
+    editProductQtd,
     removeProduct,
   } = props;
 
@@ -38,6 +39,7 @@ const Navigation = (props) => {
         total={total}
         merch={merch}
         emptyCart={emptyCart}
+        editProductQtd={editProductQtd}
         removeProduct={removeProduct}
       />
     </section>

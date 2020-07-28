@@ -11,6 +11,7 @@ import Navigation from '../components/Navigation';
         setCart,
         total,
         setTotal,
+        editProductQtd,
         removeProduct,
     } = props;
 
@@ -23,6 +24,7 @@ import Navigation from '../components/Navigation';
                 setTotal={setTotal} 
                 merch={merch} 
                 setCart={setCart}
+                editProductQtd={editProductQtd}
                 removeProduct={removeProduct}
             />
         </div>

@@ -7,9 +7,11 @@ const Cart = (props) => {
 
     const {
         cart,
+        setCart,
         total,
         merch,
         emptyCart,
+        editProductQtd,
         removeProduct,
     } = props;
 
@@ -35,7 +37,10 @@ const Cart = (props) => {
                                 <CartProduct 
                                     key={`${productObj.id}-${getRandomNumber()}`}
                                     props={props} 
-                                    productObj={productObj}
+                                    cart={cart}
+                                    setCart={setCart}
+                                    product={productObj}
+                                    editProductQtd={editProductQtd}
                                     removeProduct={removeProduct}
                                 />
                             ))

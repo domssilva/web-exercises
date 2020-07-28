@@ -3,29 +3,49 @@ import React from 'react'
 const CartProduct = (props) => {
 
     const {
-        productObj,
+        cart,
+        product,
+        editProductQtd,
         removeProduct,
     } = props;
+
+    const {
+        id,
+        img,
+        name,
+        price,
+    } = product;
 
     return (
         <div className="cart__product">
             <div className="cart__product-main flex">
             <button 
                 className="x-red"
-                onClick={() => {removeProduct(productObj.id)}}
+                onClick={() => {removeProduct(id)}}
             >
                 X
             </button>
-                <img className="cart__product-img" src={productObj.img} alt="cart product"/>
-                <p className="cart__product-name"> {productObj.name} </p>
-                <p className="cart__product-qtd">
-                    x
-                    <span className="cart__product-qtd-size">
-                        {productObj.qtd}
+                <img className="cart__product-img" src={img} alt="cart product"/>
+                <p className="cart__product-name"> {name} </p>
+                <div className="cart__product-qtd">
+                    <span 
+                        onClick={() => editProductQtd(id, '-')}
+                        className="cart__product-qtd-less btn"
+                    > 
+                        - 
                     </span>
-                </p>
+                    <span className="cart__product-qtd-size">
+                        {cart[id]}
+                    </span>
+                    <span 
+                        onClick={() => editProductQtd(id)}
+                        className="cart__product-qtd-less btn"
+                    > 
+                        +
+                    </span>
+                </div>
             </div>
-            <p className="cart__product-price">€ {productObj.price}/unità</p>
+            <p className="cart__product-price">€ {price}/unità</p>
         </div>
     );
 }

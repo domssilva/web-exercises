@@ -39,7 +39,6 @@ function App() {
       let newTotal = 0;
 
       Object.keys(cart).map(id => {
-          console.log(id);
           merch.forEach(prod => {
               if (prod.id === id) {
                   prodPrice = prod.price;
@@ -50,6 +49,17 @@ function App() {
       });
   
       setTotal(newTotal);
+  }
+
+  const editProductQtd = (productId, operation = '+') => {
+    
+    (operation === '+') ? cart[productId] += 1 : cart[productId] -= 1;
+
+    if (cart[productId] <= 0) {
+      removeProduct(productId);
+    }
+
+    setCart({...cart});
   }
 
   useEffect(() => {
@@ -66,6 +76,7 @@ function App() {
             total={total}
             setTotal={setTotal}
             merch={merch}
+            editProductQtd={editProductQtd}
             removeProduct={removeProduct}
           />
       </Route>
@@ -76,6 +87,7 @@ function App() {
           total={total}
           setTotal={setTotal}
           merch={merch}
+          editProductQtd={editProductQtd}
           removeProduct={removeProduct}
         />
       </Route>
@@ -86,6 +98,7 @@ function App() {
             total={total}
             setTotal={setTotal}
             merch={merch}
+            editProductQtd={editProductQtd}
             removeProduct={removeProduct}
           />
       </Route>
