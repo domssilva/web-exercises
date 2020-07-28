@@ -41,7 +41,7 @@ const Product = (props) => {
         <div className="product__info">
             <div className="product__info-top">
                 <h3 className="product__info-name">{name}</h3>
-                <div className="product__info-rating">
+                <div className="product__info-rating" title="media delle ricensioni">
                     {
                         Array(rating).fill('x').map(num => 
                             <svg key={getRandomNumber()} className='header__social-icon'>

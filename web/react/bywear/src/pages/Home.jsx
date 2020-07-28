@@ -12,6 +12,7 @@ const Home = (props) => {
         setCart,
         total,
         setTotal,
+        editProductQtd,
         removeProduct,
     } = props;
 
@@ -25,6 +26,7 @@ const Home = (props) => {
                 total={total} 
                 setTotal={setTotal} 
                 merch={merch} 
+                editProductQtd={editProductQtd}
                 removeProduct={removeProduct}
             />
         </div>

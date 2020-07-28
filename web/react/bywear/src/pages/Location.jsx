@@ -11,6 +11,7 @@ const Location = (props) => {
         setCart,
         total,
         setTotal,
+        editProductQtd,
         removeProduct,
     } = props;
 
@@ -19,10 +20,11 @@ const Location = (props) => {
             <Map/>
             <Navigation 
                 cart={cart} 
-                setCart={setCart}
                 total={total} 
                 setTotal={setTotal} 
                 merch={merch} 
+                setCart={setCart}
+                editProductQtd={editProductQtd}
                 removeProduct={removeProduct}
             />
         </div>
