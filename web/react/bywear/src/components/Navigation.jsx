@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import SideNav from './SideNav';
 import Cart from './Cart';
@@ -21,18 +22,34 @@ const Navigation = (props) => {
     setCart({});
   }
 
+  let cartQtd = 0;
+  for (const [key, value] of Object.entries(cart)) {
+    cartQtd += value;
+  }
+
   return (
     <section className="navigation">
-      <a href='#menu' className='navigation__anchor'>
+      <a href='#menu' className='navigation__anchor' title='menu'>
         <svg className='navigation__icon'>
           <use xlinkHref={`${icons}#icon-list`}/>
         </svg>
       </a>
-      <a href='#cart' className='navigation__cart'>
+
+      <a href='#cart' className='navigation__cart' title='carrello'>
+        <div className={cartQtd >= 1 ? `cart-popup enabled` : 'cart-popup' }>
+          {cartQtd}
+        </div>
         <svg className='navigation__icon'>
           <use xlinkHref={`${icons}#icon-cart`}/>
         </svg>
       </a>
+
+      <Link to='/checkout' className='navigation__card' title='compra'>
+        <svg className='navigation__icon'>
+          <use xlinkHref={`${icons}#icon-credit-card`}/>
+        </svg>
+      </Link>
+
       <SideNav props={props}/>
       <Cart
         cart={cart}

@@ -49,10 +49,12 @@
 
             @include adapt(phone) {
                 grid-column: unset;
+                height: 9rem;
             }
         }
 
         @include adapt(phone) {
+            margin-top: 10rem;
             padding: 0;
             width: 100%;
             display: flex;

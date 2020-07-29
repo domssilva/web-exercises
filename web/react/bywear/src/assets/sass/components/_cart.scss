@@ -125,9 +125,18 @@
             justify-content: space-between;
             margin-bottom: 1.5rem;
 
+            flex-direction: column;
+
+            @include adapt(tablet) {
+                flex-direction: row;
+            }
+
             a,
             .btn,
             button {
+
+                background: $white;
+
                 margin: 0;
                 width: 14rem;
                 height: 5rem;
@@ -135,6 +144,14 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                &:first-of-type {
+                    margin-bottom: 2rem;
+
+                    @include adapt(tablet) {
+                        margin-bottom: 0;
+                    }
+                }
             }
         }
     }

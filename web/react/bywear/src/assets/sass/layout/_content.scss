@@ -10,7 +10,7 @@
   border-bottom-left-radius: $border-radius;
 
   @include adapt(phone) {
-    padding: 2rem 0;
+    padding: 2rem 0 6rem 0;
   }
 
 }

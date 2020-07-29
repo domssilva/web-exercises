@@ -78,7 +78,7 @@
 
     @include adapt(tablet) {
       width: 100%;
-      height: 30rem !important;
+      height: 45rem !important;
       justify-content: space-evenly;
       animation: slideFromTop .6s cubic-bezier(.07,.68,1,.58) forwards;
     }
@@ -140,4 +140,37 @@
     }
   }
 
+}
+
+// cart popup (visual indicator of items being added to cart)
+
+.cart-popup {
+  width: 2.1rem;
+  height: 2.1rem;
+  position: absolute;
+  color: $white;
+  border-radius: 100%;
+  top: -1.5rem;
+  right: -2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  background: $primary-2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+  opacity: 0;
+  
+  &.enabled {
+    opacity: 1;
+    animation: pulseCircle 1.50s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+  }
+
+  @include adapt(tablet) {
+    top: .4rem;
+    right: 10rem;
+  }
 }
