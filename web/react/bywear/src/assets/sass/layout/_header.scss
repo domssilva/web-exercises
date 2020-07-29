@@ -30,6 +30,10 @@
     @include adapt(tablet) {
       margin-left: 1rem;
     }
+
+    @include adapt(phone) {
+      @include hide;
+    }
   }
 
   &__search {
@@ -192,6 +196,42 @@
     }
   }
 
+  &__filter {
+    //background: gold;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    @include adapt(tablet) {
+      margin: auto;
+    }
+
+    @include adapt(extrasmall) {
+      flex-direction: column;
+    }
+
+    input[type=radio] {
+      visibility: hidden;
+      position: absolute;
+    }
+
+    input[type=radio] + label:after {
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-left: .5rem;
+      content: " ";
+      display:inline-block;
+      border:1px solid $primary-2;
+    }
+
+    input[type=radio]:checked + label:after {
+      background:$primary-2;
+    }
+
+    fieldset:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+  }
 }
 
 a:hover .header__social-icon {

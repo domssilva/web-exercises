@@ -18,6 +18,9 @@
 // media queries
 
 @mixin adapt($breakpoint) {
+  @if $breakpoint == extrasmall {
+    @media (max-width: 300px) { @content; }
+  }
   @if $breakpoint == phone {
     @media (max-width: 600px) { @content; }
   }
