@@ -1,37 +1,9 @@
-.map {
-    height: 90%;
-    padding-top: 5rem;
-    display: flex;
-    align-items: center;
-
-    &__container {
-        position: relative;
-        height: 35rem;
-        width: 50rem;
-
-        @include adapt(phone) {
-            width: 100%;
-            height: auto;
-            text-align: center;
-        }
-    }
-
-    @include adapt(tablet) {
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-    }
-}
-
-#map {
-    position: relative;
-    height: inherit;
-    width: inherit;
-
-    object-position: center;
-    object-fit: cover;
+.leafletMap {
+    height: 300px;
+    width: 500px;
 
     @include adapt(phone) {
         width: 90%;
-        height: 20rem;
+        margin: auto;
     }
 }

@@ -56,6 +56,10 @@
 .content-location {
   grid-column-start: content;
   grid-column-end: gallery-end;
+
+  @include adapt(tablet) {
+    grid-column-end: span 3;
+  }
 }
 
 .photo {
@@ -73,7 +77,6 @@
   @include adapt(phone) {
     order: 3;
   }
-  
 }
 
 .navigation {

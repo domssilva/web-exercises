@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Map from '../components/Map';
+import HeaderNav from '../components/HeaderNav';
+import LeafletMap from '../components/LeafletMap';
 import Navigation from '../components/Navigation';
 
 const Location = (props) => {
@@ -17,7 +18,28 @@ const Location = (props) => {
 
     return (
         <div className="container">
-            <Map/>
+            <section className='content content-location'>
+            <HeaderNav/>
+            <section className='location'>
+                <LeafletMap/>
+                <div className="location__details">
+                    <h3 className="location__address">
+                        <span className="orange">street 123, AC 00</span>
+                        <br/>
+                        <span className="white">come visit us</span>
+                    </h3>
+                    <p className="location__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro optio quisquam libero quis soluta reiciendis.
+                    </p>
+                    <br/>
+                    <p className="location__text location__text--highlight">
+                        da Lunedì a Sabato
+                        <br/>
+                        9:00 &minus; 21:00
+                    </p>
+                </div>
+            </section>
+        </section>
             <Navigation 
                 cart={cart} 
                 total={total} 

@@ -228,8 +228,15 @@
       background:$primary-2;
     }
 
-    fieldset:not(:last-of-type) {
-      margin-right: 2rem;
+    fieldset {
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+
+      @include adapt(extrasmall) {
+        margin-bottom: 1rem;
+      }
+
     }
   }
 }

@@ -9,7 +9,7 @@ export default function HeaderNav() {
         <Link to='/' className='header__logo'>
           bywear
         </Link>
-        <input type='search' className='header__search' placeholder='search'/>
+        {/*<input type='search' className='header__search' placeholder='search'/>*/}
       </div>
     </header>
     );
