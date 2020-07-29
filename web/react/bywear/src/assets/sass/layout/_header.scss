@@ -4,6 +4,14 @@
   & > * {
     display: inline-block;
   }
+
+  @include adapt(tablet) {
+    margin-top: 5rem;
+  }
+
+  @include adapt(phone) {
+    margin-top: 8rem;
+  }
   
   // top = header logo and search bar
   &__top {
