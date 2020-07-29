@@ -10,7 +10,12 @@ export default function HeaderShop(props) {
 
   const handleClick = (event) => {
     const selectedFilter = event.target.id;
-    setFilters(selectedFilter);
+
+    if (selectedFilter === 'all') {
+      setFilters('');
+    } else {
+      setFilters(selectedFilter);
+    }
   }
 
   return (
@@ -33,6 +38,11 @@ export default function HeaderShop(props) {
         <fieldset>
           <input type="radio" id="tshirt" name="filter" onClick={handleClick}/>
           <label htmlFor="tshirt">t-shirt</label>
+        </fieldset>
+
+        <fieldset>
+          <input type="radio" id="all" name="filter" onClick={handleClick}/>
+          <label htmlFor="all">tutti</label>
         </fieldset>
       </section>
     </div>
