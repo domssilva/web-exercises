@@ -26,7 +26,7 @@ const Location = (props) => {
                     <h3 className="location__address">
                         <span className="orange">street 123, AC 00</span>
                         <br/>
-                        <span className="white">come visit us</span>
+                        <span className="white">vieni a visitarci</span>
                     </h3>
                     <p className="location__text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro optio quisquam libero quis soluta reiciendis.
