@@ -29,6 +29,7 @@
     }
   }
 
+  &__card,
   &__anchor,
   &__cart {
     position: fixed;
@@ -45,6 +46,10 @@
 
   &__cart {
     top: $anchortop + 5rem;
+  }
+
+  &__card {
+    top: $anchortop + 10rem;
   }
   
   &__icon:hover {
